@@ -21,7 +21,8 @@ public class App {
         olya.setName("Olya");
         olya.setLastName("M");
         olya.setNumber(100);
-        olya.setProblems("back", "neck", "sugar level");
+        String[] problems={"back","neck","sugar level"};
+        olya.setProblems(problems);
         olya.needsHelp();
 
 

@@ -1,5 +1,7 @@
 package homework9;
 
+import java.util.Arrays;
+
 public class Patient {
     private String name;
     private String lastName;
@@ -22,7 +24,7 @@ public class Patient {
     public String getLastName(){
         return lastName;
     }
-    public void setLastName(String name){
+    public void setLastName(String lastName){
         this.lastName=lastName;
     }
     public int getNumber(){
@@ -35,7 +37,7 @@ public class Patient {
         return problems;
     }
     public void setProblems(String[]problems){
-        this.problems=problems(String problem1,String problem2,String problem3)=problems;
+        this.problems=problems;
     }
     public void printProblems(){
         for(String v:this.problems){
@@ -43,6 +45,6 @@ public class Patient {
         }
     }
     public void needsHelp(){
-        System.out.println(this.name+" "+this.lastName+" needs help");
+        System.out.println(this.name+" "+this.lastName+" needs help"+" the problems are"+ Arrays.toString(problems));
     }
 }
