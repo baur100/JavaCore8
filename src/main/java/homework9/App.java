@@ -10,10 +10,15 @@ public class App {
 
         MyFur.printClass();
 
-        String[] myPlace = {"on the table, on the floor, on the wall"};
-        Shape place = new Shape(triangle, blue,myPlace);
+        int[] taniasYear = {1992, 1996, 2000};
+        Friend tania = new Friend( "Tania", "Levchenko", taniasYear);
 
-        myPlace.printClass();
+        tania.printClass();
+        tania.printYear();
+
+
+
+
 
 
 
