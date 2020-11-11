@@ -1,4 +1,4 @@
-package lesson5and6HW;
+package homework5and6;
 
 public class HW5 {
 
