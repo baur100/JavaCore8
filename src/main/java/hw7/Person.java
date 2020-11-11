@@ -12,7 +12,7 @@ public class Person {
     }
 
     public void canRun() {
-        System.out.println(name + " was born in Asia " + "in  "+ year);
+        System.out.println(name + " was born in Asia " + "in China in "+ year);
     }
 
 }

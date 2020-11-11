@@ -10,15 +10,12 @@ public class Vehicle {
     public void myCarBrand() {
         System.out.println("Brand " + brand);
     }
-
-    public void myCarColor() {
-        System.out.println("color " + color);
-    }
-
     public void myCarModel() {
         System.out.println("model " + model);
     }
-
+    public void myCarColor() {
+        System.out.println("color " + color);
+    }
     public void myCarAge() {
         System.out.println(year);
     }
