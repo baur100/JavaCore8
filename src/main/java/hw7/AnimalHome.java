@@ -19,9 +19,7 @@ public class AnimalHome {
     public void dogSex() {
         System.out.println("Beautiful naughty  " + sex);
     }
-    public void dogColor() {
-        System.out.println(color);
-    }
+    public void dogColor() { System.out.println(color);}
 }
 
 
