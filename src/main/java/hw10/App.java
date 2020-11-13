@@ -8,7 +8,7 @@ public class App {
         len.lenModel();
         len.lenColor();
         len.lenYear();
-//        System.out.println(len.toString());
+        System.out.println(len.toString());
         System.out.println("*****************");
         Keyboard mK = new Keyboard("logitech MK-520", "MK-520", Colors.BROWN, 2020);
         mK.brand();
@@ -16,7 +16,7 @@ public class App {
         mK.color();
         mK.year();
         System.out.println("*****************");
-        Mouse sF = new Mouse("Surface", "Flashing", Colors.GREEN, 2020);
+        Mouse sF = new Mouse("Surface", "Flashing", Colors.GREEN,2020);
         sF.Brand();
         sF.Color();
         sF.Model();

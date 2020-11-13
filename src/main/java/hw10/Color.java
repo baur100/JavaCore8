@@ -1,6 +1,6 @@
 package hw10;
 
-public enum Colors {
+public enum Color {
     WHITE,
     BLUE,
     GREEN,
@@ -8,5 +8,4 @@ public enum Colors {
     HAZEL,
     GREY,
     YELLOW
-
 }
