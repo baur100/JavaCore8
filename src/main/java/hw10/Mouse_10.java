@@ -1,0 +1,53 @@
+package hw10;
+
+import lesson10.ConnectionType;
+
+public class Mouse_10 {
+    private String brand;
+    private String model;
+    private ConnectionType connectionType;
+    private int price;
+
+    public Mouse_10(String brand, String model, ConnectionType connectionType, int price) {
+        this.brand = brand;
+        this.model = model;
+        this.connectionType = connectionType;
+        this.price = price;
+    }
+
+    public String getBrand() {
+        return brand;
+    }
+
+    public void setBrand(String brand) {
+        this.brand = brand;
+    }
+
+    public String getModel() {
+        return model;
+    }
+
+    public void setModel(String model) {
+        this.model = model;
+    }
+
+    public ConnectionType getConnectionType() {
+        return connectionType;
+    }
+
+    public void setConnectionType(ConnectionType connectionType) {
+        this.connectionType = connectionType;
+    }
+
+    public int getPrice() {
+        return price;
+    }
+
+    public void setPrice(int price) {
+        this.price = price;
+    }
+
+    public void printInfo(){
+        System.out.println("Mouse: brand =" + brand + ", model =" + model + ", connectionType =" + connectionType + ", price =" + price);
+        }
+}
