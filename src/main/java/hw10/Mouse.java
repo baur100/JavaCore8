@@ -65,6 +65,9 @@ public class Mouse {
     public void Year() {
         System.out.println("I took brand new  " + year + " year");
     }
+
+    public void getColor() {
+    }
 }
 
 

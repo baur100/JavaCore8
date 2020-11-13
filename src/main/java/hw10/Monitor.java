@@ -1,5 +1,7 @@
 package hw10;
 
+import java.util.Arrays;
+
 public class Monitor {
     private String brand;
     private String model;
