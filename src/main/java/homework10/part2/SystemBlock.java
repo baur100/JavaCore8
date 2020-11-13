@@ -1,4 +1,4 @@
-package homework10;
+package homework10.part2;
 
 public class SystemBlock {
     private String brand;
@@ -37,8 +37,8 @@ public class SystemBlock {
     public String toString(){
         return "SystemBlock{"+
                 "brand="+brand+
-                ", model="+model+
-                "sb type="+sbType+
+                " ,model="+model+
+                " ,sb type="+sbType+
                 "}";
     }
 }

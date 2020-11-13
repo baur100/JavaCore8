@@ -4,6 +4,8 @@ public class Eye {
     private String name;
     private EyeColor type;
 
+    public Eye(){}
+
     public Eye(String name,EyeColor type){
         this.name=name;
         this.type=type;
@@ -19,5 +21,11 @@ public class Eye {
     }
     public void setType(EyeColor type){
         this.type=type;
+    }
+
+    public String printInfo(){
+        return "Eye:"+
+                "name="+name+
+                ", eye Color="+type;
     }
 }

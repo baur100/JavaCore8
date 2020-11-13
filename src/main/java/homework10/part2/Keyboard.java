@@ -1,4 +1,4 @@
-package homework10;
+package homework10.part2;
 
 public class Keyboard {
     private String brand;
