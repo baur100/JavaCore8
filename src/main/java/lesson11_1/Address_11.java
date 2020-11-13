@@ -6,6 +6,13 @@ public class Address_11 {
     private String state;
     private int zip;
 
+    public Address_11(String streetAddress1, String city, String state, int zip) {
+        this.streetAddress1 = streetAddress1;
+        this.city = city;
+        this.state = state;
+        this.zip = zip;
+    }
+
     public String getStreetAddress1() {
         return streetAddress1;
     }
@@ -36,14 +43,5 @@ public class Address_11 {
 
     public void setZip(int zip) {
         this.zip = zip;
-    }
-
-    public Address_11(String streetAddress1, String city, String state, int zip) {
-        this.streetAddress1 = streetAddress1;
-        this.city = city;
-        this.state = state;
-        this.zip = zip;
-
-
     }
 }
