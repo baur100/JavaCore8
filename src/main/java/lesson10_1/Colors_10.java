@@ -1,6 +1,6 @@
 package lesson10_1;
 
-public enum Colors {
+public enum Colors_10 {
     RED,
     GREEN,
     YELLOW,
