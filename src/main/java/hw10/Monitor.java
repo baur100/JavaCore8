@@ -44,26 +44,25 @@ public class Monitor {
     public int getYear(int year) {
         return year;
     }
+
+
+
+    public void lenBrand() {
+        System.out.println("I liked  " + brand+ " brand");
+    }
+    public void lenModel() {
+        System.out.println("So, I desise to buy " + model+ " model");
+    }
+
+    public void lenColor() {
+        System.out.println("There was " + Arrays.toString(color) + " colors, but I prefer WHITE " );
+    }
+    public void getYear() {
+        System.out.println("I liked model made in " + year);
+    }
 }
 
 
-//
-//    public void lenBrand() {
-//        System.out.println("I liked  " + brand+ " brand");
-//    }
-//    public void lenModel() {
-//        System.out.println("So, I desise to buy " + model+ " model");
-//    }
-//
-//    public void lenColor() {
-//        System.out.println("There was " + Arrays.toString(color) + " colors, but I prefer WHITE " );
-//    }
-//    public void lenYear() {
-//
-//        System.out.println("I liked model made in " + year);
-//    }
-//
-//
 //    public String toString() {
 //        return "Monitor{" +
 //                "brand='" + brand + '\'' +

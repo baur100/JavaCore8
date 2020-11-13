@@ -11,27 +11,27 @@ public class SystemBlock {
         this.year = year;
     }
 
-    public void setBrand(String brand) {
-        this.brand = brand;
-    }
-
     public String getBrand() {
+
         return brand;
     }
 
+    public void setBrand(String brand) {
+
+        this.brand = brand;
+    }
+    public void getFeatures() {
+    }
     public void setFeatures(String features) {
+
         this.features = features;
     }
-
-    public String getFeatures() {
-        return features;
-    }
-
     public void setYear(int year) {
         this.year = year;
     }
 
     public int getYear() {
+
         return year;
     }
 }

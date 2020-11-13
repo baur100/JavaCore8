@@ -52,21 +52,21 @@ public class Mouse {
 //}
 
 
-//    public void Brand() {
-//        System.out.println("I look at the brand " + brand);
-//    }
-//
-//    public void Model() {
-//        System.out.println("So I prefer to buy " + features);
-//    }
-//
-//    public void Color() {
-//        System.out.println("I like the " + color + " color");
-//    }
-//
-//    public void Year() {
-//        System.out.println("I took brand new  " + year + " year");
-//    }
+    public void Brand() {
+        System.out.println("I look at the brand " + brand);
+    }
+
+    public void Model() {
+        System.out.println("So I prefer to buy " + features);
+    }
+
+    public void Color() {
+        System.out.println("I like the " + color + " color");
+    }
+
+    public void Year() {
+        System.out.println("I took brand new  " + year + " year");
+    }
 
 
 

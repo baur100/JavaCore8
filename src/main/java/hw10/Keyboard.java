@@ -45,30 +45,32 @@ public class Keyboard {
     public void setYear(int year) {
         this.year = year;
     }
+
+    public void getModel() {
+    }
 }
 
 
 
 
+   public void mKbrand() {
+        System.out.println("I was looking for a brand " +brand);
+    }
+    public void model() {
+        System.out.println("I bought a model " +model);
+    }
+    public void color() {
 
-//   public void mKbrand() {
-//        System.out.println("I was looking for a brand " +brand);
-//    }
-//    public void model() {
-//        System.out.println("I bought a model " +model);
-//    }
-//    public void color() {
-//
-//        System.out.println("I choose  " +color+ " color");
-//    }
-//
-//    public void year() {
-//        System.out.println("I get the last model of " +year);
-//    }
-//    public void brand() {
-//        System.out.println();
-//    }
-//}
+        System.out.println("I choose  " +color+ " color");
+    }
+
+    public void year() {
+        System.out.println("I get the last model of " +year);
+    }
+    public void brand() {
+        System.out.println();
+    }
+}
 
 
 
