@@ -1,4 +1,4 @@
-package hw10;
+package hw9;
 
 public class App_hw10 {
     public static void main(String[] args) {

@@ -1,4 +1,4 @@
-package hw10;
+package hw9;
 
 public class Coffee {
     private String name;
