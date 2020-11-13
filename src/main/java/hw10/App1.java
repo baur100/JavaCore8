@@ -1,6 +1,8 @@
 package hw10;
 
 public class App1 {
+    public static void main(String[] args) {
+    }
     Colors[] colors={Colors.BLUE,Colors.BROWN,Colors.GREEN,Colors.GREY,Colors.HAZEL,Colors.YELLOW};
     Monitor len = new Monitor("Lenovo", "G50-70", colors, 2000);
         len.lenBrand();
@@ -16,10 +18,10 @@ public class App1 {
         mK.year();
         System.out.println("*****************");
     Mouse sF = new Mouse("Surface", "Flashing", Colors.GREEN,2020);
-        sF.Brand();
-        sF.Color();
-        sF.Model();
-        sF.Year();
+        sF.brand();
+        sF.color();
+        sF.model();
+        sF.year();
         System.out.println("*****************");
     SystemBlock CPU = new SystemBlock("Smart", "Lightening", 2020);
         CPU.SPUBrand();

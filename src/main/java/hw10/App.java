@@ -11,7 +11,7 @@ public class App {
         System.out.println(len.toString());
         System.out.println("*****************");
         Keyboard mK = new Keyboard("logitech MK-520", "MK-520", Colors.BROWN,2020);
-        mK.setBrand();
+        mK.getBrand();
         mK.getModel();
         mK.getColor();
         mK.getYear();

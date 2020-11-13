@@ -6,7 +6,7 @@ public class Mouse {
     private String brand;
     private String features;
     private Colors color;
-    private int year;
+    int year;
     private Object Colors;
 
 
@@ -48,8 +48,6 @@ public class Mouse {
     public void setYear(int year) {
         this.year = year;
     }
-    }
-//}
 
 
     public void Brand() {
@@ -67,6 +65,7 @@ public class Mouse {
     public void Year() {
         System.out.println("I took brand new  " + year + " year");
     }
+}
 
 
 

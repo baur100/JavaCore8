@@ -34,21 +34,21 @@ public class SystemBlock {
 
         return year;
     }
+
+
+
+
+    public void SPUBrand() {
+
+        System.out.println("I choose  brand new  " + brand+ " last model");
+    }
+
+    public void SPUFeatures() {
+        System.out.println("I love the " + features+ " features");
+    }
+
+    public void SPUYear() {
+
+        System.out.println("I prefer the " + year + " year");
+    }
 }
-
-
-
-//    public void SPUBrand() {
-//
-//        System.out.println("I choose  brand new  " + brand+ " last model");
-//    }
-//
-//    public void SPUFeatures() {
-//        System.out.println("I love the " + features+ " features");
-//    }
-//
-//    public void SPUYear() {
-//
-//        System.out.println("I prefer the " + year + " year");
-//    }
-//}

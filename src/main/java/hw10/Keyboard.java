@@ -22,9 +22,7 @@ public class Keyboard {
         this.brand = brand;
     }
 
-    public Colors getColor() {
-        return color;
-    }
+    public Colors getColor() { return color; }
 
     public void setColor(Colors color) {
         this.color = color;
@@ -48,25 +46,25 @@ public class Keyboard {
 
     public void getModel() {
     }
-}
 
 
-
-
-   public void mKbrand() {
-        System.out.println("I was looking for a brand " +brand);
+    public void mKbrand() {
+        System.out.println("I was looking for a brand " + brand);
     }
+
     public void model() {
-        System.out.println("I bought a model " +model);
+        System.out.println("I bought a model " + model);
     }
+
     public void color() {
 
-        System.out.println("I choose  " +color+ " color");
+        System.out.println("I choose  " + color + " color");
     }
 
     public void year() {
-        System.out.println("I get the last model of " +year);
+        System.out.println("I get the last model of " + year);
     }
+
     public void brand() {
         System.out.println();
     }
