@@ -11,5 +11,7 @@ public class App {
         WiledAnimal myWiledAnimal=new WiledAnimal("Jack","squarel",1,Color.YELLOW,"park");
         myWiledAnimal.printAnimalColor();
         myWiledAnimal.printAnimalLocation();
+
+        System.out.println(myWiledAnimal.getColor());
     }
 }
