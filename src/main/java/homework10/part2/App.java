@@ -20,8 +20,5 @@ public class App {
         Computer myComp=new Computer(M120,K1,myMouse,b1);
         System.out.println(myComp);
 
-
     }
-
-
 }
