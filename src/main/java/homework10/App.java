@@ -11,7 +11,7 @@ public class App {
         SystemBlock bloc = new SystemBlock(disk,mazBo,intelCore);
         Computer myComp = new Computer(ke1, v10, mon1, bloc);
 
-        System.out.println(myComp);
+        System.out.println(myComp.getSystemBlock().getMotherBoard().getBrand());
 
     }
 }
