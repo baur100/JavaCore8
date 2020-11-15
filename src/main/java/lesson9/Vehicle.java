@@ -36,7 +36,8 @@ public class Vehicle {
         if(year<1880 || year>2021){
             throw new IllegalArgumentException("Wrong year passed in");
         }
-        this.year = year;
+        this.year = year
+        ;
     }
 
     public void printInfo() {

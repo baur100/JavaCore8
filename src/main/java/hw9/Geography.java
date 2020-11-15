@@ -39,7 +39,7 @@ public class Geography {
         for (String v : this.religions){
             System.out.println(v);
         }
-            public void is();
+//            public void is();
 
             System.out.println(this.capital + "is a capital of " + this.country + ".");
         }
