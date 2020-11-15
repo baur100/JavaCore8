@@ -1,4 +1,6 @@
-package homework11;
+package homework11.part1;
+
+import homework11.part1.Address;
 
 public class ContactInfo {
     private String phone;

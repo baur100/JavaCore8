@@ -1,4 +1,4 @@
-package homework11;
+package homework11.part1;
 
 public class Address {
     private String streetAddress1;
