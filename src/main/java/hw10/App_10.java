@@ -9,7 +9,7 @@ public class App_10 {
         SystemBlock_10 iruHome = new SystemBlock_10("Dell", ryzen5, b450m, 13580);
         Keyboard_10 multiDevice = new Keyboard_10("LOGITECH", "WIRELESS", 3580);
         Monitore_10 vision = new Monitore_10("BENQ", "EX3501R", 35, 55950);
-        Mouse_10 trackBall = new Mouse_10("LOGITECH", "WIRELESS", ConnectionType.WIRED_USB, 7680);
+        Mouse_10 trackBall = new Mouse_10("LOGITECH", "WIRELESS", ConnectionType_10.WIRED_USB, 7680);
 
         Computer_10 dell = new Computer_10(iruHome, multiDevice, trackBall, vision);
         dell.printInfo();
