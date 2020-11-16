@@ -9,6 +9,7 @@ public class Monitor {
     private int year;
 
     public Monitor(String brand, String model, Colors[] color, int year) {
+
         this.brand = brand;
         this.model = model;
         this.color = color;
