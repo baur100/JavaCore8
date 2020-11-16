@@ -5,10 +5,10 @@ import lesson10.ConnectionType;
 public class Mouse_10 {
     private String brand;
     private String model;
-    private ConnectionType connectionType;
+    private ConnectionType_10 connectionType;
     private int price;
 
-    public Mouse_10(String brand, String model, ConnectionType connectionType, int price) {
+    public Mouse_10(String brand, String model, ConnectionType_10 connectionType, int price) {
         this.brand = brand;
         this.model = model;
         this.connectionType = connectionType;
@@ -31,11 +31,11 @@ public class Mouse_10 {
         this.model = model;
     }
 
-    public ConnectionType getConnectionType() {
+    public ConnectionType_10 getConnectionType() {
         return connectionType;
     }
 
-    public void setConnectionType(ConnectionType connectionType) {
+    public void setConnectionType(ConnectionType_10 connectionType) {
         this.connectionType = connectionType;
     }
 
