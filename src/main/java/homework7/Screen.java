@@ -4,7 +4,7 @@ public class Screen {
     private String brand;
     private String[] subjects;
     private int size;
-}
+
 
     public Screen(String brand, String[] subjects, int size) {
         this.brand = brand;
@@ -16,7 +16,7 @@ public class Screen {
 
     }
 
-    public void getBrand() {
+    public String getBrand() {
         return brand;
     }
 
@@ -31,7 +31,7 @@ public class Screen {
 
     public void setSize(int size) {
         if (size < 10 || size > 100) {
-            throw new ArithmeticException("Wrong screen size")
+            throw new ArithmeticException("Wrong screen size");
         }
         this.size = size;
 

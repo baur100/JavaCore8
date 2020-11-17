@@ -4,9 +4,9 @@ public class Game {
     private String name;
     private String[] type;
     private int age;
-}
 
-    public void Game(String name.String[] type, int age) {
+
+    public Game(String name, String[] type, int age) {
         this.name = name;
         this.type = type;
         this.age = age;
@@ -37,16 +37,19 @@ public class Game {
     public int getAge() {
         if (age < 0) {
             throw new ArithmeticException("Wrong age");
-            this.age = age;
         }
-        public void printType () {
-            for {
-                String v:this.type){
-                    System.out.println(v);
-                }
-                public void printClass () {
-                    System.out.println(this.name + " " + this.age);
-                }
-            }
+        return age;
+    }
+
+    public void printType() {
+        for (String v : this.type) {
+            System.out.println(v);
+        }
+    }
+
+    public void printClass() {
+        System.out.println(this.name + " " + this.age);
+    }
+}
 
 

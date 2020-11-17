@@ -34,7 +34,7 @@ public class WorkKS8 {
 
         Tables tablenew=new Tables();
         tablenew.color="white";
-//        tablenew.size=25.3 22.0;
+        tablenew.size=25.3 ;
         tablenew.using="For Computer";
         tablenew.warranty=5;
         System.out.println(tablenew.warranty);

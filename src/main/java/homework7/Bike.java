@@ -1,12 +1,14 @@
 package homework7;
 
+import java.util.Arrays;
+
 public class Bike {
     private String brand;
     private String color;
     private int wheelssize;
     private String gear;
     private String[] subjects;
-}
+
 
     public Bike(String brand, String color, int wheelssize, String gear, String[] subjects) {
         this.brand = brand;
@@ -17,13 +19,7 @@ public class Bike {
     }
 
     public Bike() {
-
     }
-
-    public Bike(String stels, String black, int wheelssize, String shemano, String bikessubject) {
-
-    }
-
     public void setBrand(String brand) {
         this.brand = brand;
     }
@@ -76,6 +72,18 @@ public class Bike {
     public void printClass() {
         System.out.println(this.brand + " " + this.color + " " + this.wheelssize + " " + this.gear);
     }
+
+    @Override
+    public String toString() {
+        return "Bike{" +
+                "brand='" + brand + '\'' +
+                ", color='" + color + '\'' +
+                ", wheelssize=" + wheelssize +
+                ", gear='" + gear + '\'' +
+                ", subjects=" + Arrays.toString(subjects) +
+                '}';
+    }
+}
 
 
 
