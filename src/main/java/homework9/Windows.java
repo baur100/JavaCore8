@@ -63,7 +63,7 @@ public class Windows {
         }
 
 
-        public void printClass(){
+        public String toString(){
             System.out.println(this.size + "" + this.type + " " + this.color);
         }
     }

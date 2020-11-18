@@ -8,7 +8,7 @@ public class WorkKS9 {
 
         Windows mywindows = new Windows(33, windowtype, Color.GREEN);
         Phones myphone = new Phones(OSys.iOS, "white", 1999, "Newscom");
-        mywindows.printclass();
+        System.out.println(mywindows);
         mywindows.printtype();
         System.out.println(mywindows.getType());
 
