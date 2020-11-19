@@ -18,7 +18,7 @@ public class App14_2 {
         numbers.add(-50);
         System.out.println(numbers);
 
-        for (int i = 0, i < numbers.size(); i++){
+        for (int i = 0; i< numbers.size();i++){
             System.out.println(numbers.get(i));
         }
 
@@ -26,8 +26,8 @@ public class App14_2 {
             System.out.println(v);
         }
 
-        numbers.forEach(x-> System.out.println(x));
+        numbers.forEach(x -> System.out.println(x));
 
-        numbers.forEach(x-> System.out.println(x));
+        numbers.forEach(System.out::println);
     }
 }
