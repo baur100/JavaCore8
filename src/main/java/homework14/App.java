@@ -45,16 +45,14 @@ public class App {
         System.out.println("***************");
         for (int i = 0; i < random.size(); i++) {
             System.out.println(random.get(i));
-
         }
-
 
         for (int v : random) {
             System.out.println(v);
         }
+
         random.forEach(x -> System.out.println(x));
         random.forEach(System.out::println);
-
 
         List<Patient> people = new ArrayList<Patient>();
         List<Problems> sicknes = new ArrayList<>();
