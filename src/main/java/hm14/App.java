@@ -37,7 +37,7 @@ public class App {
         System.out.println(colors);
         System.out.println(colors.size());
 
-        ArrayList<String>LightColors = new ArrayList<>(Arrays.asList("Light Green", "Light Blue"));
+              ArrayList<String>LightColors = new ArrayList<>(Arrays.asList("Light Green", "Light Blue"));
         colors.addAll(LightColors);
         System.out.println(colors);
         colors.addAll(1, LightColors);
