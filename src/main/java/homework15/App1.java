@@ -35,9 +35,10 @@ public class App1 {
         System.out.println(acceptedInsuranses);
 
 
+        System.out.println("**********BrowardHealth*************");
         Address BHadress = new Address("123 main", "FortL", "FL", 33312);
-        Hospital BrowarHealth = new Hospital("BrowardHealth", BHadress, doctors, rooms, acceptedInsuranses);
-        BrowarHealth.printInfo();
+        Hospital BrowardHealth = new Hospital("BrowardHealth", BHadress, doctors, rooms, acceptedInsuranses);
+        BrowardHealth.printInfo();
     }
 
 }

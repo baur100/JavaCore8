@@ -37,11 +37,9 @@ public class Doctor {
 
     @Override
     public String toString() {
-        return "Doctor{" +
-                "name='" + name + '\'' +
+        return "name='" + name + '\'' +
                 ", lastName='" + lastName + '\'' +
-                ", positin=" + positin +
-                '}';
+                ", positin=" + positin;
     }
 
 }

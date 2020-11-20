@@ -59,10 +59,26 @@ public class Hospital {
     public void setAcceptedInsuranses(List<InsuranseCompanies> acceptedInsuranses) {
         this.acceptedInsuranses = acceptedInsuranses;
     }
-    public void printInfo(){
-//        System.out.println(hospitalName+" on "+address+"acceptedInsuranses="+List);
-        for(InsuranseCompanies c:acceptedInsuranses){
-            System.out.println(hospitalName+" on "+address+"is accepting Insurance "+c);
+
+    public void printDoctors(List<Doctor> doctors){
+        for(Doctor d: doctors){
+            System.out.println("Doctor:"+d);
         }
+    }
+    public void printAcceptedInsurances(List<InsuranseCompanies> acceptedInsuranses){
+        for(InsuranseCompanies i: acceptedInsuranses){
+            System.out.println("Accepted Insurances: "+i);
+        }
+    }
+    public void printRooms(Map<Integer,String>rooms){
+        rooms.entrySet().forEach(entry->{
+            System.out.println(entry.getKey()+" "+entry.getValue());
+        });
+    }
+    public void printInfo(){
+        System.out.println(hospitalName+" on "+address);
+        printDoctors(doctors);
+        printAcceptedInsurances(acceptedInsuranses);
+        printRooms(rooms);
     }
 }
