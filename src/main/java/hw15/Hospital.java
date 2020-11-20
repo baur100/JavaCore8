@@ -22,5 +22,8 @@ public class Hospital {
 
     public Hospital(String coney_island_hospital, hw15.Address address, List<Doctor> doctors, Map<Integer, String> rooms, List<InsuranceCompany> insurance) {
     }
+    public void printInfo(){
+        System.out.println(hospitalName +" "+ address + " " +insurance);
+    }
 }
 

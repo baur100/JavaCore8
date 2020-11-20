@@ -9,6 +9,7 @@ import java.util.Map;
 
 public class App {
     private static Object Address;
+    private static Object Hospital;
 
     public static void main(String[] args) {
         Address Address = new Address( "2601 Ocean Parkway", "Brooklyn", "NY", 11235);
@@ -34,6 +35,9 @@ public class App {
         System.out.println(Insurance);
         System.out.println(rooms);
         System.out.println(Address);
+
+        ConeyIslandHospital.printInfo();
+
     }
 
 
