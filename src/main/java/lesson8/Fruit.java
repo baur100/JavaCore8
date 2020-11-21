@@ -4,6 +4,6 @@ public class Fruit {
     public String name;
     public String color;
     public void eat(){
-        System.out.println("eat tasty "+name+" ");
+        System.out.println("Eat tasty "+name);
     }
 }

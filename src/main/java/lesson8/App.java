@@ -10,33 +10,37 @@ public class App {
 
         Person anna = new Person();
         anna.name = "Anna";
-        anna.lastName= "Polyakova";
-        anna.age = 28;
+        anna.lastName = "Polyakova";
+        anna.age=28;
 
         Person david = new Person();
         david.age=31;
-        david.name = "David";
+        david.name="David";
+
+
+        david.greet("Hank");
+        anna.greet("David");
 
 //        System.out.println(oleg.lastName);
 
         Vehicle myCar = new Vehicle();
-        myCar.brand = "toyota";
-        myCar.color = "pink";
-        myCar.year = 1998;
+        myCar.brand = "Toyota";
+        myCar.color = "Pink";
         myCar.model = "Prius";
+        myCar.year = 2019;
 
         Vehicle myFriendsCar = new Vehicle();
         myFriendsCar.year = 1982;
         myFriendsCar.model = "412";
-        myFriendsCar.brand = "moskvitch";
-        myFriendsCar.color = "bezh";
+        myFriendsCar.brand = "Moskvich";
+        myFriendsCar.color = "Bezh";
+
 
 //        myCar.beep();
 //        myFriendsCar.beep();
 //
 //        myCar.drive();
 //        myFriendsCar.drive();
-        david.greet("Hank");
-        anna.greet("David");
+
     }
 }

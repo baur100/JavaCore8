@@ -2,19 +2,23 @@ package lesson12;
 
 public class App {
     public static void main(String[] args) {
-        NewDesktopLight k12My = new NewDesktopLight("grey", "MyBrand", "k12");
-        k12My.americanPlug();
-        k12My.e27BulbStandardSupport();
-        k12My.workUsing110v();
+//        NewDesktopLight k12My = new NewDesktopLight("Grey","MyBrand","K12");
+//        k12My.americanPlug();
+//        k12My.e27bulbStandardSupport();
+//        k12My.workUsing110v();
+//
+//        k12My.lampOn();
+//
+//        MyPrinter cc = new MyPrinter("MyBrand","LaserXX","Laser",false);
+//        cc.americanPlug();
+//        cc.workUsing110v();
 
-        k12My.LampOn();
-        k12My.LampOff();
+//        BulbE27 vv = new BulbE27();
+        UsElectricPlug bb = new MyPrinter("MyBrand","LaserXX","Laser",false);
+        UsElectricPlug vv = new NewDesktopLight("Grey","MyBrand","K12");
+        bb.americanPlug();
+        vv.americanPlug();
 
-        MyPrinter cc = new MyPrinter("Brother", "MP52100", "laser", false);
-
-        cc.americanPlug();
-        cc.workUsing110v();
-        cc.print("abc");
 
 
 

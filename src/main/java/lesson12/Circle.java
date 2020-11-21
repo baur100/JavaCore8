@@ -1,9 +1,7 @@
 package lesson12;
 
-import java.security.PublicKey;
-
 public class Circle implements Shape {
-    public double radius;
+    private double radius;
 
     public Circle(double radius) {
         this.radius = radius;
@@ -11,13 +9,12 @@ public class Circle implements Shape {
 
     @Override
     public void draw() {
-        System.out.println("i draw circle");
-
+        System.out.println("I draw circle");
     }
 
     @Override
     public double getSquare() {
-       return Math.PI*radius*radius;
+        return Math.PI*radius*radius;
     }
 
     @Override

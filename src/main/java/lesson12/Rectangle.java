@@ -1,6 +1,6 @@
 package lesson12;
 
-public class Rectangle implements Shape{
+public class Rectangle implements Shape {
     private double height;
     private double width;
 
@@ -11,8 +11,7 @@ public class Rectangle implements Shape{
 
     @Override
     public void draw() {
-        System.out.println("i draw Rectange");
-
+        System.out.println("I draw rectangle");
     }
 
     @Override
@@ -22,6 +21,6 @@ public class Rectangle implements Shape{
 
     @Override
     public double getPerimeter() {
-        return 2*(this.height+this.width);
+        return 2*(this.width+this.height);
     }
 }

@@ -6,24 +6,22 @@ public class App1 {
 //        sq1.draw();
 //        System.out.println(sq1.getPerimeter());
 //        System.out.println(sq1.getSquare());
-
         Rectangle rt1 = new Rectangle(2,4);
 //        rt1.draw();
 //        System.out.println(rt1.getPerimeter());
 //        System.out.println(rt1.getSquare());
-
         Circle cr1 = new Circle(5);
 //        cr1.draw();
 //        System.out.println(cr1.getPerimeter());
 //        System.out.println(cr1.getSquare());
 
-        Shape[] shapes = {sq1, rt1, cr1};
+        Shape[] shapes = {sq1,rt1,cr1};
+
         for (Shape shape : shapes){
             shape.draw();
         }
-
-
-
-
+        for (Shape shape : shapes){
+            System.out.println(shape.getPerimeter());
+        }
     }
 }

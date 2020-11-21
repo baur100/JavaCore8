@@ -1,6 +1,6 @@
 package lesson12;
 
-public class NewDesktopLight implements BulbE27, UsElectricPlug, Voltage110Standard{
+public class NewDesktopLight implements BulbE27,UsElectricPlug,Voltage110vStandard{
     private String color;
     private String brand;
     private String model;
@@ -11,26 +11,25 @@ public class NewDesktopLight implements BulbE27, UsElectricPlug, Voltage110Stand
         this.model = model;
     }
 
-    public void LampOn(){
+    public void lampOn(){
         System.out.println(brand+" "+model+" turned on");
     }
-    public void LampOff(){
+    public void lampOff(){
         System.out.println(brand+" "+model+" turned off");
     }
 
-
     @Override
-    public void e27BulbStandardSupport() {
+    public void e27bulbStandardSupport() {
         System.out.println("Support E27 bulb");
     }
 
     @Override
     public void americanPlug() {
-        System.out.println("I use american plug");
+        System.out.println("I use American Electric Plug");
     }
 
     @Override
     public void workUsing110v() {
-        System.out.println("Working using 100 volt");
+        System.out.println("Working using 110 volt");
     }
 }

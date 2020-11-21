@@ -2,12 +2,16 @@ package lesson10;
 
 public class App {
     public static void main(String[] args) {
-        Subjects[] joeSubjects = {Subjects.BIOLOGY, Subjects.IT};
-
-        Student joe = new Student("Joe", "biden", joeSubjects);
-
-        System.out.println(joe);
+        Colors car = Colors.RED;
+        Colors apple = Colors.GREEN;
+        // "RED" ,"red", "Red"
 
 
+        SchoolType middleSchoolType = SchoolType.PUBLIC;
+
+        String str = new String("Hello world");
+        String str1 = "Hello world";
+
+        System.out.println(str.toUpperCase());
     }
 }

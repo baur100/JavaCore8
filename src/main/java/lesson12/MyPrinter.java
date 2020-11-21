@@ -1,10 +1,10 @@
 package lesson12;
 
-public class MyPrinter implements UsElectricPlug, Voltage110Standard {
+public class MyPrinter implements UsElectricPlug, Voltage110vStandard{
     private String brand;
     private String model;
     private String type;
-    private boolean color;
+    public boolean color;
 
     public MyPrinter(String brand, String model, String type, boolean color) {
         this.brand = brand;
@@ -14,19 +14,16 @@ public class MyPrinter implements UsElectricPlug, Voltage110Standard {
     }
 
     public void print(String xx){
-        System.out.println("I print "+xx);
-
+        System.out.println("I printed "+xx);
     }
-
 
     @Override
     public void americanPlug() {
-        System.out.println("Buy american plug to use me");
+        System.out.println("Buy American socket too use me");
     }
 
     @Override
     public void workUsing110v() {
         System.out.println("110 volt only");
-
     }
 }

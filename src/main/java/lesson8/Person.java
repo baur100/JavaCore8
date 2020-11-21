@@ -6,6 +6,6 @@ public class Person {
     public int age;
 
     public void greet(String otherName){
-        System.out.println("hi, "+otherName+", i am "+name);
+        System.out.println("Hi " +otherName+", I'm "+name);
     }
 }

@@ -6,11 +6,11 @@ public class Vehicle {
     public int year;
     public String color;
 
-    public void beep() {
-        System.out.println("Bee - Beep " + model + " " + brand + " making BEEP");
+    public void beep(){
+        System.out.println("Beeep- Beep "+model+" "+brand +" making BEEEP");
+    }
+    public void drive(){
+        System.out.println(color+" car can drive");
     }
 
-    public void drive() {
-        System.out.println(color + " car can drive");
-    }
 }

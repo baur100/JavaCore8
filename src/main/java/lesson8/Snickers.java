@@ -6,8 +6,7 @@ public class Snickers {
     public double size;
     public String color;
 
-    public void printInfo() {
-        System.out.println(model+" "+brand+" "+size+" "+color);
+    public void printInfo(){
+        System.out.println(model+" "+ brand + " " +size + " " + color);
     }
 }
-
