@@ -7,13 +7,13 @@ import java.util.Map;
 
 public class App {
     public static void main(String[] args) {
-        List<homework15.Doctor> doctors = new ArrayList<>();
-        doctors.add(new homework15.Doctor("Joseph", "Baum", homework15.Position.DERMATOLOGIST));
-        doctors.add(new homework15.Doctor("Mary", "Smith", homework15.Position.CARDIOLOGYST));
-        doctors.add(new homework15.Doctor("Kate", "Brook", homework15.Position.PHYSICIAN));
-        doctors.add(new homework15.Doctor("Peter", "Gram", homework15.Position.SURGEON));
+        List<Doctor> doctors = new ArrayList<>();
+        doctors.add(new Doctor("Joseph", "Baum", Position.DERMATOLOGIST));
+        doctors.add(new Doctor("Mary", "Smith", Position.CARDIOLOGYST));
+        doctors.add(new Doctor("Kate", "Brook", Position.PHYSICIAN));
+        doctors.add(new Doctor("Peter", "Gram", Position.SURGEON));
 
-        for(homework15.Doctor d:doctors){
+        for(Doctor d:doctors){
             System.out.println(d);
         }
 
