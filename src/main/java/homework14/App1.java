@@ -8,7 +8,7 @@ public class App1 {
     public static void main(String[] args) {
 
         List<Integer> year = new ArrayList<>(Arrays.asList(1997,1967,1853,1789));
-        year.addAll(year);
+
         System.out.println(year);
 
 
