@@ -25,6 +25,8 @@ public class App {
 
         System.out.println(rooms);
 
+
+
         List<InsuranseCompanies> acceptedInsuranses = new ArrayList<>();
         acceptedInsuranses.add(InsuranseCompanies.MEDICARE);
         acceptedInsuranses.add(InsuranseCompanies.AETNA);
@@ -35,6 +37,8 @@ public class App {
 
         Address hospitalAddress = new Address("13 Balmond Ave", "Chicago", "IL", "60015");
         System.out.println( hospitalAddress);
+
+
 
 
 
