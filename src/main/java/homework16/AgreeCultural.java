@@ -1,4 +1,4 @@
-package h16;
+package homework16;
 
 public class AgreeCultural {
     private String nameOfCulture;
@@ -27,8 +27,8 @@ public class AgreeCultural {
 
     @Override
     public String toString() {
-        return "AgreeCultural:" +
-                "nameOfCulture=" + nameOfCulture +
-                ", fielsNumber=" + fielsNumber;
+        return "\nAgreeCultural: " +
+                "\nnameOfCulture: " + nameOfCulture +
+                ", fielsNumber: " + fielsNumber;
     }
 }

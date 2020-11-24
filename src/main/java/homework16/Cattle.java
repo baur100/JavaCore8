@@ -1,4 +1,4 @@
-package h16;
+package homework16;
 
 public enum Cattle {
     COWS,

@@ -1,4 +1,4 @@
-package h16;
+package homework16;
 
 import java.util.ArrayList;
 import java.util.HashMap;

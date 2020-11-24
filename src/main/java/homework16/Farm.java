@@ -1,4 +1,8 @@
-package h16;
+package homework16;
+
+import homework16.Address;
+import homework16.AgreeCultural;
+import homework16.Cattle;
 
 import java.util.List;
 import java.util.Map;
@@ -58,7 +62,7 @@ public class Farm {
     }
     public void printAgreeCaltural(List<AgreeCultural> agreeCultural){
         for(AgreeCultural a: agreeCultural){
-            System.out.println("AgreeCultural"+agreeCultural+"on the filed number"+ a.getFielsNumber());
+            System.out.println(agreeCultural+"\non the filed number"+ a.getFielsNumber());
         }
     }
     public void printCattleAmmount(Map<Cattle,Integer>cattle){
