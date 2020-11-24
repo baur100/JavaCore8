@@ -1,4 +1,4 @@
-package homeworkND8;
+package homework8_2;
 
 public class Jobs {
     private String name;

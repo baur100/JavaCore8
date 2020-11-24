@@ -1,6 +1,4 @@
-package homeworkND8;
-
-import java.time.Year;
+package homework8_2;
 
 public class Child {
     private String name;

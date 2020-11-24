@@ -1,4 +1,4 @@
-package homeworkND9;
+package homework9;
 
 public enum Colors {
     RED,
