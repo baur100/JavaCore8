@@ -52,14 +52,7 @@ public class Farm {
         this.agreeCultural = agreeCultural;
     }
 
-    @Override
-    public String toString() {
-        return "Farm:" +
-                "name=" + name +
-                ", address=" + address +
-                ", cattle=" + cattle +
-                ", agreeCultural=" + agreeCultural;
-    }
+
     public void printAgreeCaltural(List<AgreeCultural> agreeCultural){
         for(AgreeCultural a: agreeCultural){
             System.out.println(agreeCultural+"\non the filed number"+ a.getFielsNumber());
