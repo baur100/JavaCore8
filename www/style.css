@@ -1,0 +1,14 @@
+.mumu {
+background-color: pink;
+}
+#xx {
+color: blue;
+font-family: arial;
+}
+h1 {
+font-size: 150%;
+}
+[class=redstring] {
+                       color: red;
+                       font-family: courier;
+                   }
