@@ -12,7 +12,7 @@ public class App {
         cattle.put(Cattle.SHEEPS,100);
         cattle.put(Cattle.PIGS,53);
         cattle.put(Cattle.CHICKENS,140);
-        System.out.println(cattle);
+
 
     List<AgreeCultural> agreeCultural=new ArrayList<>();
     AgreeCultural corn=new AgreeCultural("Corn",1);
@@ -20,9 +20,6 @@ public class App {
     agreeCultural.add(new AgreeCultural("Millet",2));
     agreeCultural.add(new AgreeCultural("Potato",3));
 
-    for(AgreeCultural a:agreeCultural){
-        System.out.println(a.getNameOfCulture()+" "+a.getFielsNumber());
-    }
 
     Address myFarmAddress=new Address("113 berezka","Perm","Fl",33307);
     Farm myFarm=new Farm("Kolhoz",myFarmAddress,cattle,agreeCultural);

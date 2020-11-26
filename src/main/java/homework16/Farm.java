@@ -55,7 +55,7 @@ public class Farm {
 
     public void printAgreeCaltural(List<AgreeCultural> agreeCultural){
         for(AgreeCultural a: agreeCultural){
-            System.out.println(agreeCultural+"\non the filed number"+ a.getFielsNumber());
+            System.out.println(a);
         }
     }
     public void printCattleAmmount(Map<Cattle,Integer>cattle){

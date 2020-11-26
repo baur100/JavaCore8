@@ -27,8 +27,7 @@ public class AgreeCultural {
 
     @Override
     public String toString() {
-        return "\nAgreeCultural: " +
-                "\nnameOfCulture: " + nameOfCulture +
-                ", fielsNumber: " + fielsNumber;
+        return nameOfCulture +
+                " on the filed number " + fielsNumber;
     }
 }
