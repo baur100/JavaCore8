@@ -1,27 +1,15 @@
 package homework18;
 
 abstract class Carnivores implements Mammals{
-    public String kind;
-
-    public Carnivores(String kind) {
-        this.kind = kind;
-    }
-
-    public String getKind() {
-        return kind;
-    }
-
-    public void setKind(String kind) {
-        this.kind = kind;
-    }
+    protected String kind;
 
     void killing(){
-        System.out.println("I can kill others");
+        System.out.println("I can kill other");
     }
 
     @Override
     public void haveHair() {
-        System.out.println("Im hairy");
+        System.out.println("I'm hairy");
     }
 
     @Override

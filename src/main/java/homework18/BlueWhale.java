@@ -3,8 +3,7 @@ package homework18;
 public class BlueWhale extends Carnivores{
     private String name;
 
-    public BlueWhale(String kind, String name) {
-        super(kind);
+    public BlueWhale(String name) {
         this.name = name;
     }
 
@@ -15,22 +14,9 @@ public class BlueWhale extends Carnivores{
     public void setName(String name) {
         this.name = name;
     }
+
     void filterFood(){
         System.out.println("I can filter my food");
-    }
-
-    public BlueWhale(String kind) {
-        super(kind);
-    }
-
-    @Override
-    public String getKind() {
-        return super.getKind();
-    }
-
-    @Override
-    public void setKind(String kind) {
-        super.setKind(kind);
     }
 
     @Override

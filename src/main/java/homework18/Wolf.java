@@ -3,8 +3,7 @@ package homework18;
 public class Wolf extends Carnivores {
     private String name;
 
-    public Wolf(String kind, String name) {
-        super(kind);
+    public Wolf(String name) {
         this.name = name;
     }
 
@@ -19,19 +18,7 @@ public class Wolf extends Carnivores {
     void yyy(){
         System.out.println("I can yyy on the moon");
     }
-    public Wolf(String kind) {
-        super(kind);
-    }
 
-    @Override
-    public String getKind() {
-        return super.getKind();
-    }
-
-    @Override
-    public void setKind(String kind) {
-        super.setKind(kind);
-    }
 
     @Override
     void killing() {
