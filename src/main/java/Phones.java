@@ -1,4 +1,4 @@
-public enum Phones {
-    android;
-    ios;
-}
+//public enum Phones {
+//    android;
+//    ios;
+//}

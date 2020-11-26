@@ -27,7 +27,7 @@ public class Windows {
     }
 
     public void setsize(int size) {
-      if (size< 1) {
+        if (size < 1) {
             throw new ArithmeticException("Wrong sixe");
         }
     }
@@ -61,10 +61,10 @@ public class Windows {
         for (Type v : this.type) {
             System.out.println(v);
         }
-
-
-        public String toString(){
-            System.out.println(this.size + "" + this.type + " " + this.color);
-        }
     }
+
+    public String toString() {
+        return size + "" + type + " " + color;
+    }
+
 }
