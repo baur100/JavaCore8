@@ -40,6 +40,7 @@ public class LoginKoel {
         Thread.sleep(3000);
         driver.quit();
     }
+
     @Test
     public void wrongLoginToApp() throws InterruptedException{
   //Arrange
