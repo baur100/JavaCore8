@@ -12,6 +12,10 @@ public class Jobs {
     }
     public Jobs(){}
 
+    public Jobs(String nameOrganization, int year) {
+        this.nameOrganization = nameOrganization;
+        this.year = year;
+    }
 
     public void setName(String name){
         this.name = name;
@@ -38,4 +42,12 @@ public class Jobs {
         return year;
     }
 
+    @Override
+    public String toString() {
+        return "Jobs{" +
+                "name='" + name + '\'' +
+                ", nameOrganization='" + nameOrganization + '\'' +
+                ", year=" + year +
+                '}';
+    }
 }

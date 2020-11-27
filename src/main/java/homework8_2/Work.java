@@ -5,8 +5,12 @@ public class Work {
 
         Bags chanel = new Bags("Chanel", "black");
         Bags myBag = new Bags();
-        chanel.setBrand("Chanel");
-        chanel.setColor("black");
+        myBag.setBrand("Chanel1");
+        myBag.setColor("black1");
+        chanel.printInfo();
+        myBag.printInfo();
+        chanel.setColor("Red");
+        chanel.printInfo();
 
         System.out.println(chanel.getBrand());
         System.out.println(chanel.getColor());

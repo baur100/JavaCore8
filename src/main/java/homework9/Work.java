@@ -2,8 +2,13 @@ package homework9;
 
 public class Work {
     public static void main(String[] args) {
-
-        Vehicle myCar = new Vehicle("Toyota", Colors.WHITE, 2017, VehicleType.AUTOMAT);
-
+Colors[]colors = {Colors.GREY, Colors.RED, Colors.WHITE};
+        Vehicle myCar = new Vehicle("Toyota", colors, 2017, VehicleType.AUTOMAT);
+        System.out.println(myCar.toString());
+ print(myCar.getBrand());
+ print(myCar.toString());
     }
+public static void print(String a){
+    System.out.println(a);
+}
 }

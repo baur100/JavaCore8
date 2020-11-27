@@ -8,6 +8,9 @@ public class Child {
     public Child(String name, String lastName, int age){
         this.name = name;
         this.lastName = lastName;
+        if(age>100 || age<0){
+            throw new ArithmeticException("Wrong age");
+        }
         this.age = age;
     }
     public Child(){}
@@ -37,4 +40,12 @@ public class Child {
         return age;
     }
 
+
+    public void printInfo() {
+        System.out.println("Child: " +
+                "name='" + name + '\'' +
+                ", lastName='" + lastName + '\'' +
+                ", age=" + age);
+
+    }
 }

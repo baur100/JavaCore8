@@ -10,6 +10,10 @@ public class Bags {
     }
     public Bags(){}
 
+    public Bags(String brand) {
+        this.brand = brand;
+    }
+
     public void setBrand(String b){
         brand = b;
     }
@@ -25,4 +29,8 @@ public class Bags {
     }
 
 
+    public void printInfo() {
+        System.out.println("Bags: " +
+                "brand: " + brand + ", color: " + color);
+    }
 }
