@@ -1,39 +1,34 @@
-package lesson9;
+package Lesson9;
 
 public class Person {
     private String name;
     private String lastName;
-    private int age;
+    private String age;
 
-    public Person(String name, String lastName, int age){
-        this.name=name;
+    public Person(String name, String lastName, String age) {
+        this.name = name;
         this.lastName = lastName;
-        setAge(age);
+        this.age = age;
     }
-    public Person(String name){
-        this.name=name;
-    }
-    public Person(){}
 
-    public void setName(String n){
-        name = n;
+    public void setName(String nm) {
+        name = nm;
     }
     public String getName(){
         return name;
-    }
 
-    public void setLastName(String lastName){
+    }
+    public void setLastname(String lastName){
         this.lastName = lastName;
     }
     public String getLastName(){
         return this.lastName;
     }
-    public void setAge(int age){
-        if(age>110 || age <0){
-            throw new ArithmeticException("Wrong age");
+
+    public void setAge(int age) {
+        if (age > 100 || age < 0) {
+            throw new ArithmeticException("Wrong age ");
         }
-        this.age=age;
     }
-
-
 }
+

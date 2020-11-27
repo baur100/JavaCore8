@@ -1,8 +1,10 @@
-package lesson10;
+package Lesson10;
 
 public enum ConnectionType {
-    WIRED_USB,
-    WIRED_PS2,
-    WIRELESS_BLUETOOTH,
-    WIRELESS_TOKEN
+
+    Wireless_Bluetooth,
+    Wireless_Token,
+    Wired_USB,
+
+
 }

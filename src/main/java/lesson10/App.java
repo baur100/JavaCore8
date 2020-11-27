@@ -1,17 +1,12 @@
-package lesson10;
+package Lesson10;
 
 public class App {
     public static void main(String[] args) {
-        Colors car = Colors.RED;
-        Colors apple = Colors.GREEN;
-        // "RED" ,"red", "Red"
+
+        Adress home = new Adress("7229 Tommy st", "44 Ave", "Charlotte","NC");
+        Person Ion = new Person("Ion","Ceby",home);
+        System.out.println(Ion);
 
 
-        SchoolType middleSchoolType = SchoolType.PUBLIC;
-
-        String str = new String("Hello world");
-        String str1 = "Hello world";
-
-        System.out.println(str.toUpperCase());
     }
 }

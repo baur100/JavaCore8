@@ -1,4 +1,4 @@
-package lesson10;
+package Lesson10;
 
 public class Mouse {
     private String brand;

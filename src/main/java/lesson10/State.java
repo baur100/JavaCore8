@@ -1,9 +1,8 @@
-package lesson10;
+package Lesson10;
 
 public enum State {
-    CA,
-    NJ,
+    NC,
+    SC,
     NY,
-    FL,
-    TX
+    OH,
 }

@@ -1,16 +1,14 @@
-package lesson10;
+package Lesson10;
 
 public class Person {
     private String name;
-    private String lastName;
-    private Gender gender;
-    private Address address;
+    private String lastname;
+    private Adress adress;
 
-    public Person(String name, String lastName, Gender gender, Address address) {
+    public Person(String name, String lastname, Adress adress) {
         this.name = name;
-        this.lastName = lastName;
-        this.gender = gender;
-        this.address = address;
+        this.lastname = lastname;
+        this.adress = adress;
     }
 
     public String getName() {
@@ -21,37 +19,26 @@ public class Person {
         this.name = name;
     }
 
-    public String getLastName() {
-        return lastName;
+    public String getLastname() {
+        return lastname;
     }
 
-    public void setLastName(String lastName) {
-        this.lastName = lastName;
+    public void setLastname(String lastname) {
+        this.lastname = lastname;
     }
 
-    public Gender getGender() {
-        return gender;
-    }
+    public Adress getAdress() { return adress;}
 
-    public void setGender(Gender gender) {
-        this.gender = gender;
-    }
-
-    public Address getAddress() {
-        return address;
-    }
-
-    public void setAddress(Address address) {
-        this.address = address;
-    }
+    public void setAdress(String Adress) { this.adress = adress; }
 
     @Override
-    public String toString() {
-        return "Person{" +
-                "name='" + name + '\'' +
-                ", lastName='" + lastName + '\'' +
-                ", gender=" + gender +
-                ", address=" + address +
-                '}';
+        public String toString() {
+            return "Person{" +
+                    "name='" + name + '\'' +
+                    ", lastname='" + lastname + '\'' +
+                    ", adress=" + adress +
+                    '}';
+        }
+
+
     }
-}

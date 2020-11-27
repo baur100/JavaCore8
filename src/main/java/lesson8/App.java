@@ -1,46 +1,37 @@
-package lesson8;
+package Lesson8;
 
 public class App {
     public static void main(String[] args) {
 
-        Person oleg = new Person();
-        oleg.name = "Oleg";
-        oleg.lastName = "Ivanov";
-        oleg.age = 25;
+        Person Maria = new Person("Maria","Cebotari", "26", "Moldovian");
+        Maria.name = "Maria";
+        Maria.lastname = "Cebotari";
+        Maria.age = "26";
+        Maria.nationality = "Moldovian";
 
-        Person anna = new Person();
-        anna.name = "Anna";
-        anna.lastName = "Polyakova";
-        anna.age=28;
+        Person Vasile = new Person("Vasile", "Damian", "22", "Spanish");
+        Vasile.name = "Vasile";
+        Vasile.lastname = "Damian";
+        Vasile.age = "22";
+        Vasile.nationality = "Spanish";
 
-        Person david = new Person();
-        david.age=31;
-        david.name="David";
+        Person dina = new Person("Dina","Buga","27","Moldovian");
+        dina.name = "Dina";
+        dina.lastname = "Buga";
+        dina.age = "27";
 
+         dina.greet("Lindsey");
+         Vasile.greet("Dina");
+         System.out.println(dina.age);
 
-        david.greet("Hank");
-        anna.greet("David");
+        Vehicle newcar = new Vehicle("Lexus","GS 460", "2020", "Red");
+        newcar.brand = "Lexus";
+        newcar.model = "GS 460";
+        newcar.year = "2020";
+        newcar.color = "Red";
 
-//        System.out.println(oleg.lastName);
-
-        Vehicle myCar = new Vehicle();
-        myCar.brand = "Toyota";
-        myCar.color = "Pink";
-        myCar.model = "Prius";
-        myCar.year = 2019;
-
-        Vehicle myFriendsCar = new Vehicle();
-        myFriendsCar.year = 1982;
-        myFriendsCar.model = "412";
-        myFriendsCar.brand = "Moskvich";
-        myFriendsCar.color = "Bezh";
-
-
-//        myCar.beep();
-//        myFriendsCar.beep();
-//
-//        myCar.drive();
-//        myFriendsCar.drive();
-
+       //newcar.opendoors();
+         newcar.jump();
+         System.out.println(newcar.color);
     }
 }
