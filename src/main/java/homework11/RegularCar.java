@@ -13,12 +13,11 @@ public class RegularCar extends Cars {
 
     }
 
-    public RegularCar(String salon) {
-        this.salon = salon;
-    }
+//   // public RegularCar(String salon) {
+//        this.salon = salon;
+//    }
 
-//    public RegularCar(Cars car1, String leather) {
-//}
+//
 
 
     public String getSalon() {

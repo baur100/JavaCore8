@@ -36,6 +36,12 @@ public class WorkCar extends RegularCar {
         return "WorkCar{" +
                 "toolBox='" + toolBox + '\'' +
                 ", seats=" + seats +
+                ", make='" + make + '\'' +
+                ", color='" + color + '\'' +
+                ", tyresize=" + tyresize +
+                ", carType=" + carType +
+                ", engineType=" + engineType +
+                ", year=" + year +
                 '}';
     }
 }
