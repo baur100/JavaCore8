@@ -16,11 +16,11 @@ public class NewLocalCar implements VehicleFuelType,EngineType{
     }
 
     public void BacuUpon() {
-        System.out.println(make + " " + model + " camera loaded");
+        System.out.println(make+" " + model + " camera loaded");
     }
 
         public void BackUpOption(){
-        System.out.println(make=" "+model+" camera as option");
+        System.out.println(make+" "+model+" camera as option");
     }
 
 
