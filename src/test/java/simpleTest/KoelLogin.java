@@ -17,7 +17,7 @@ public class KoelLogin {
     @Test
     public void loginToApp() throws InterruptedException {
         // Arrange
-        System.setProperty("webdriver.chrome.driver","chromedriver.exe");
+        System.setProperty("webdriver.chrome.driver","chromedriver");
         WebDriver driver = new ChromeDriver();
         driver.get("https://koelapp.testpro.io/");
         Thread.sleep(2000);
@@ -46,7 +46,7 @@ public class KoelLogin {
     @Test
     public void wrongLoginToApp() throws InterruptedException {
         // Arrange
-        System.setProperty("webdriver.chrome.driver","chromedriver.exe");
+        System.setProperty("webdriver.chrome.driver","chromedriver");
         WebDriver driver = new ChromeDriver();
         driver.get("https://koelapp.testpro.io/");
         Thread.sleep(2000);
