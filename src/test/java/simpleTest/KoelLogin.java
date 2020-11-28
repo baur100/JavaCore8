@@ -71,4 +71,19 @@ public class KoelLogin {
         Thread.sleep(3000);
         driver.quit();
     }
+    @Test
+    public void udemy(){
+        // //*[@alt='Headshot Image' and @src='https://s.udemycdn.com/topic-images/lohp-topic-banners/GettyImages-1166389425_opt.jpg']"
+        // //[contains(@src,'1166389425')]
+        // //*[text()='Learn. Grow. Succeed.']
+
+        // (//*[@alt='Headshot Image'])[1]
+        // //*[@class='header--gap-auth-button--7KoL0'])[1]/a/*[text()='Log in']
+        // /parent::*
+        // (//nav)/following-sibling::*[5]
+        //*[@class='header--gap-auth-button--7KoL0'])[1]/preceding-sibling::*[5]
+
+
+
+    }
 }
