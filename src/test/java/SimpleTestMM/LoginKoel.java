@@ -6,9 +6,24 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.Assert;
+import org.testng.annotations.AfterMethod;
+import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
 public class LoginKoel {
+    private WebDriver driver;
+    @BeforeMethod
+    public void startUp() throws InterruptedException {
+        System.setProperty("webdriver.chrome.driver","chromedriver.exe");
+        driver = new ChromeDriver();
+        driver.get("https://koelapp.testpro.io/");
+        Thread.sleep(2000);
+    }
+    @AfterMethod
+    public void tearDown() throws  InterruptedException{
+        Thread.sleep(3000);
+        driver.quit();
+    }
     // [type='email']
     // [type='password']
     // button
@@ -67,6 +82,18 @@ public class LoginKoel {
 
         Thread.sleep(3000);
         driver.quit();
+    }
+    @Test
+    public void udemy(){
+        //"//*[@alt='Headshot Image' and @src='http://s.udemycdn.com/topic-images/lohp-topic-banners/GettyImages-1166389425_opt.jpg']";
+        //"//*[contains(src,'1166389425')]
+        //"//*[text() = 'Learn,Grow,Succeed.']
+
+        // (//*[@alt='Headshot Image'])[1]
+        // //*[@class='header--gap-auth-button--7KoL8'][1]/a/*[test()='Log in']
+        // /parent::*
+        //(//nav)/following-sibling::*[5]
+        //*[@class='header--gap-auth-button--7KoL8'][1]/preceding-sibling::*[5]
     }
 
 }
