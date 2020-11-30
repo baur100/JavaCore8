@@ -1,7 +1,5 @@
 package hw15;
 
-import javax.swing.text.Position;
-
 public class Doctor {
     private String name;
     private String lastName;
@@ -13,8 +11,7 @@ public class Doctor {
         this.position = position;
     }
 
-    public Doctor(String name, String lastName, hw15.Position pediatrician) {
-    }
+
 
     public String getName() {
         return name;

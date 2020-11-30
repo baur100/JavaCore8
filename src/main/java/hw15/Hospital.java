@@ -1,7 +1,5 @@
 package hw15;
 
-import lesson10.Address;
-
 import java.util.List;
 import java.util.Map;
 
@@ -9,8 +7,8 @@ public class Hospital {
     private String hospitalName;
     private Address address;
     private List<Doctor> doctors;
-    Map <Integer, String> rooms;
-    List<InsuranceCompany> insurance;
+    private Map <Integer, String> rooms;
+    private List<InsuranceCompany> insurance;
 
     public Hospital(String hospitalName, Address address, List<Doctor> doctors, Map<Integer, String> rooms, List<InsuranceCompany> insurance) {
         this.hospitalName = hospitalName;
@@ -19,11 +17,30 @@ public class Hospital {
         this.rooms = rooms;
         this.insurance = insurance;
     }
-
-    public Hospital(String coney_island_hospital, hw15.Address address, List<Doctor> doctors, Map<Integer, String> rooms, List<InsuranceCompany> insurance) {
+    public void printDoctor(List<Doctor> doctors){
+        for (Doctor d : doctors){
+            System.out.println("Doctor: " +d);
+        }
     }
+    public void printInsurance(List<InsuranceCompany> insurance){
+        for (InsuranceCompany i : insurance){
+            System.out.println("InsuranceCompany: " +i);
+        }
+
+    }
+    public void printRooms(Map <Integer, String> rooms){
+        rooms.entrySet().forEach(entry -> {
+            System.out.println(entry.getKey() + " " + entry.getValue());
+        });
+    }
+
+
+
+
+
     public void printInfo(){
-        System.out.println(hospitalName +" "+ address + " " +insurance);
+
+        System.out.println(hospitalName +" "+ address);
     }
 }
 

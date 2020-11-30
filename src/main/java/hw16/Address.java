@@ -1,10 +1,10 @@
-package hw15;
+package hw16;
 
 public class Address {
     private String street;
     private String town;
     private String state;
-    private  int zip;
+    private int zip;
 
     public Address(String street, String town, String state, int zip) {
         this.street = street;
@@ -12,8 +12,6 @@ public class Address {
         this.state = state;
         this.zip = zip;
     }
-
-
 
     @Override
     public String toString() {
