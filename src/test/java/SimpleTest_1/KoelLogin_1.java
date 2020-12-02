@@ -1,18 +1,69 @@
 package SimpleTest_1;
 
+
 import org.openqa.selenium.By;
+import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chrome.ChromeOptions;
+import org.testng.Assert;
+import org.testng.annotations.AfterMethod;
+import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
-public class KoelLogin_1 {
-    @Test
-    public void loginToApp(){
-        System.setProperty("webdriver.chrome.driver","chromedriver.exe");
-        WebDriver driver = new ChromeDriver();
-        driver.get("https://koelapp.testpro.io/");
+import java.util.ArrayList;
+import java.util.List;
 
+public class KoelLogin_1 {
+    private WebDriver driver;
+
+    @BeforeMethod
+    public void startUp(){
+        System.setProperty("webdriver.chrome.driver", "chromedriver.exe");
+//        ChromeOptions chromeOptions = new ChromeOptions();
+//        chromeOptions.addArguments("--no-sandbox");
+        driver = new ChromeDriver();
+    }
+    @AfterMethod
+    public void tearDown() throws InterruptedException {
+        Thread.sleep(5000);
+        driver.quit();
+    }
+
+    @Test
+    public void simpleTest_ClickElephant_PageOpened() throws InterruptedException {
+
+        driver.get("https://udemy.com");
+        driver.manage().window().maximize();
+        Thread.sleep(2000);
+
+        //Act
+        WebElement elephant = driver.findElement(By.xpath("//*[contains(@src,'762616')]"));
+        elephant.click();
+        String title = driver.getTitle();
+
+        //Assert
+        Assert.assertEquals(title, "The Complete SQL Bootcamp for the Manipulation and Analysis of Data | Udemy");
+    }
+
+    @Test
+    public void simpleTest_SearchJava_PageOpened() throws InterruptedException {
+        driver.get("https://udemy.com");
+        Thread.sleep(2000);
+        //Act
+        WebElement searchField = driver.findElement(By.xpath("(//*[@name='q'])[2]"));
+        searchField.sendKeys("Java");
+        searchField.sendKeys(Keys.ENTER);
+
+        String title = driver.getTitle();
+//        String url = driver.getCurrentUrl();
+
+        Assert.assertTrue(title.equals("Online Courses - Anytime, Anywhere | Udemy"));
+    }
+
+    @Test
+    public void login_ToKoel_LoggedToApp() throws InterruptedException {
         driver.get("https://koelapp.testpro.io/");
 //        driver.manage().window().maximize();
         Thread.sleep(2000);
@@ -27,10 +78,10 @@ public class KoelLogin_1 {
 
         Thread.sleep(3000);
 
-//        List<WebElement> list = new ArrayList<>();
- //       list = driver.findElements(By.xpath("//*[@class='fa fa-sign-out control']"));
+        List<WebElement> list = new ArrayList<>();
+        list = driver.findElements(By.xpath("//*[@class='fa fa-sign-out control']"));
 
-//        Assert.assertFalse(list.size()==0);
+        Assert.assertFalse(list.size()==0);
     }
 
     @Test
@@ -50,8 +101,8 @@ public class KoelLogin_1 {
 
         Thread.sleep(3000);
 
- //       List<WebElement> listOfErrors = new ArrayList<>();
-//        listOfErrors = driver.findElements(By.cssSelector(".error"));
-//        Assert.assertEquals(listOfErrors.size(),1);
+        List<WebElement> listOfErrors = new ArrayList<>();
+        listOfErrors = driver.findElements(By.cssSelector(".error"));
+        Assert.assertEquals(listOfErrors.size(),1);
     }
 }
