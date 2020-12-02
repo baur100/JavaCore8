@@ -1,12 +1,12 @@
 import org.testng.Assert;
 import org.testng.annotations.Test;
-import tickets_1.CalculateTicket_1;
+import tickets.CalculateTicket;
 
-public class UnitTest_1 {
+public class UnitTest {
     @Test
     public void ifInfant_returnsZero(){
         //Arrange
-        CalculateTicket_1 calculateTicket = new CalculateTicket_1(1000);
+        CalculateTicket calculateTicket = new CalculateTicket(1000);
 
         //Act
         double result = calculateTicket.getPrice(1);
@@ -17,7 +17,7 @@ public class UnitTest_1 {
     @Test
     public void ifChild_resultIsHalfPrice(){
         //Arrange
-        CalculateTicket_1 calculateTicket = new CalculateTicket_1(1000);
+        CalculateTicket calculateTicket = new CalculateTicket(1000);
 
         //Act
         double result = calculateTicket.getPrice(5);
@@ -28,7 +28,7 @@ public class UnitTest_1 {
     @Test
     public void ifAdult_resultIsFullPrice(){
         //Arrange
-        CalculateTicket_1 calculateTicket = new CalculateTicket_1(1000);
+        CalculateTicket calculateTicket = new CalculateTicket(1000);
 
         //Act
         double result = calculateTicket.getPrice(25);
@@ -39,7 +39,7 @@ public class UnitTest_1 {
     @Test
     public void ifSenior_resultIs80percent(){
         //Arrange
-        CalculateTicket_1 calculateTicket = new CalculateTicket_1(1000);
+        CalculateTicket calculateTicket = new CalculateTicket(1000);
 
         //Act
         double result = calculateTicket.getPrice(75);
