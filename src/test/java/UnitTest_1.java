@@ -2,7 +2,7 @@ import org.testng.Assert;
 import org.testng.annotations.Test;
 import tickets.CalculateTicket;
 
-public class UnitTest {
+public class UnitTest_1 {
     @Test
     public void ifInfant_returnsZero(){
         //Arrange
