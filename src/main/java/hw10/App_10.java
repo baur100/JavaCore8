@@ -1,7 +1,5 @@
 package hw10;
 
-import lesson10.ConnectionType;
-
 public class App_10 {
     public static void main(String[] args) {
         Processor_10 ryzen5 = new Processor_10("AMD", "Ryzen 5 2600 OEM", 8390);

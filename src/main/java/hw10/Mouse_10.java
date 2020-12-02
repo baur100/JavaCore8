@@ -1,6 +1,6 @@
 package hw10;
 
-import lesson10.ConnectionType;
+
 
 public class Mouse_10 {
     private String brand;
