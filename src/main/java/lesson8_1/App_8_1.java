@@ -1,6 +1,6 @@
 package lesson8_1;
 
-import lesson8.Vehicle;
+import lesson8_1.Vehicle_1;
 
 public class App_8_1 {
     public static void main(String[] args) {
@@ -27,7 +27,7 @@ public class App_8_1 {
         myCar.model = "Prius";
         myCar.year = 2019;
 
-        Vehicle myFriendsCar = new Vehicle();
+        Vehicle_1 myFriendsCar = new Vehicle_1();
         myFriendsCar.year = 1982;
         myFriendsCar.model = "2106";
         myFriendsCar.brand = "LADA";
