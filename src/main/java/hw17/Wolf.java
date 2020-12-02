@@ -1,6 +1,6 @@
 package hw17;
 
-public class Wolf {
+public class Wolf extends Carnivores {
     private String name;
     private int weight;
     private String color;
