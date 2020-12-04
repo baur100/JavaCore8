@@ -1,17 +1,11 @@
 package homework11;
 
-public class Teacher {
-    private String name;
-    private String lastName;
-    private int year;
-    private Address address;
+public class Teacher extends Person{
+
     private Subjects subject;
 
     public Teacher(String name, String lastName, int year, Address address, Subjects subject){
-        this.name = name;
-        this.lastName = lastName;
-        this.year = year;
-        this.address = address;
+        super(name, lastName, year, address);
         this.subject = subject;
     }
 
