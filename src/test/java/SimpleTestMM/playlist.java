@@ -5,6 +5,7 @@ import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.ExpectedCondition;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
@@ -32,23 +33,26 @@ public class playlist {
     }
 
     @Test
-    public void loginToApp() {
+    public void createPlayList() throws InterruptedException {
         wait.until(ExpectedConditions.visibilityOfElementLocated(By.cssSelector("[autofocus='autofocus']")));
         WebElement email = driver.findElement(By.cssSelector("[type='email']"));
-        WebElement password = driver.findElement(By.cssSelector("[type='password']"));
+        WebElement password = driver.findElement(By.cssSelector("[type = 'password']"));
         WebElement loginButton = driver.findElement(By.cssSelector("button"));
-        WebElement plus = driver.findElement(By.cssSelector("[class='fa fa-plus-circle control create']"));
-        WebElement space = driver.findElement(By.cssSelector("[placeholder='↵ to save']"));
-        WebElement enter = driver.findElement(By.id("Value"));
-
         email.sendKeys("koeluser86@testpro.io");
         password.sendKeys("te$t$tudent");
+        Thread.sleep(5000);
         loginButton.click();
-        plus.click();
-        space.sendKeys("Aurash");
-        enter.sendKeys(Keys.ENTER);
+        Actions action = new Actions(driver);
+        WebElement plus = driver.findElement(By.xpath("//*[@id=\"playlists\"]/h1/i"));
+        action.moveToElement(plus).build().perform();
+        action.moveToElement(plus).click().perform();
+        WebElement space = driver.findElement(By.xpath("//*[@class='create']/input[@type='text']"));
 
-        wait.until(ExpectedConditions.visibilityOfElementLocated(By.cssSelector("[href='#!/favorites']")));
-        driver.findElement(By.cssSelector("[href='#!/favorites']"));
+//        plus.click();
+//        space.sendKeys("Aurash");
+//        space.sendKeys(Keys.ENTER);
+
+//        wait.until(ExpectedConditions.visibilityOfElementLocated(By.cssSelector("[href='#!/favorites']")));
+//        driver.findElement(By.cssSelector("[href='#!/favorites']"));
     }
 }

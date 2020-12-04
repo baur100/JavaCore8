@@ -31,10 +31,10 @@ public class LoginKoel {
     @Test
     public void loginToApp() throws InterruptedException {
   //Arrange
-        System.setProperty("webdriver.chrome.driver","chromedriver.exe");
-        WebDriver driver = new ChromeDriver();
-        driver.get("https://koelapp.testpro.io/");
-        Thread.sleep(3000);
+       // System.setProperty("webdriver.chrome.driver","chromedriver.exe");
+//        WebDriver driver = new ChromeDriver();
+//        driver.get("https://koelapp.testpro.io/");
+//        Thread.sleep(3000);
  //Act
         WebElement email = driver.findElement(By.cssSelector("[type='email']"));
         WebElement password = driver.findElement(By.cssSelector("[type = 'password']"));
@@ -53,7 +53,7 @@ public class LoginKoel {
 
         }
         Thread.sleep(3000);
-        driver.quit();
+        //driver.quit();
     }
 
     @Test
