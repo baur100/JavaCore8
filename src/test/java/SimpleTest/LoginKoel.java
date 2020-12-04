@@ -1,25 +1,35 @@
 package SimpleTest;
 
-import org.openqa.selenium.By;
-import org.openqa.selenium.NoSuchElementException;
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebElement;
+import org.openqa.selenium.*;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.FluentWait;
+import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
+import java.time.Duration;
 import java.util.List;
+import java.util.concurrent.TimeUnit;
 
 public class LoginKoel {
     private WebDriver driver;
+    private WebDriverWait wait;
+    private FluentWait<WebDriver> fluentWait;
     @BeforeMethod
     public void startUp() throws InterruptedException {
         System.setProperty("webdriver.chrome.driver","chromedriver.exe");
         driver = new ChromeDriver();
+        wait = new WebDriverWait(driver,10,100);
+        fluentWait = new FluentWait<WebDriver>(driver)
+                .withTimeout(Duration.ofSeconds(10))
+                .pollingEvery(Duration.ofMillis(100))
+                .ignoring(NoSuchElementException.class)
+                .ignoring(StaleElementReferenceException.class);
+//        driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
         driver.get("https://koelapp.testpro.io/");
-        Thread.sleep(2000);
     }
     @AfterMethod
     public void tearDown() throws InterruptedException {
@@ -28,8 +38,10 @@ public class LoginKoel {
     }
 
     @Test
-    public void loginToApp() throws InterruptedException {
+    public void loginToApp(){
         // Act
+//        wait.until(ExpectedConditions.elementToBeClickable(By.cssSelector("[type='email']")));
+        fluentWait.until(x->x.findElement(By.cssSelector("[type='email']")).isDisplayed());
         WebElement email = driver.findElement(By.cssSelector("[type='email']"));
         WebElement password = driver.findElement(By.cssSelector("[type='password']"));
         WebElement loginButton = driver.findElement(By.cssSelector("button"));
@@ -37,20 +49,18 @@ public class LoginKoel {
         email.sendKeys("koeluser06@testpro.io");
         password.sendKeys("te$t$tudent");
         loginButton.click();
-        Thread.sleep(2000);
 
         // Assert
-        try{
-            driver.findElement(By.cssSelector(".home"));
-            Assert.assertTrue(true);
-        } catch (NoSuchElementException xx){
-            Assert.assertTrue(false,"Home element not found");
-        }
+//        wait.until(ExpectedConditions.visibilityOfElementLocated(By.cssSelector(".home")));
+        fluentWait.until(x->x.findElement(By.cssSelector(".home")).isDisplayed());
+        List<WebElement> list = driver.findElements(By.cssSelector(".home"));
+        Assert.assertEquals(list.size(),1);
     }
     @Test
-    public void wrongLoginToApp() throws InterruptedException {
+    public void wrongLoginToApp(){
 
         // Act
+        wait.until(ExpectedConditions.elementToBeClickable(By.cssSelector("[type='email']")));
         WebElement email = driver.findElement(By.cssSelector("[type='email']"));
         WebElement password = driver.findElement(By.cssSelector("[type='password']"));
         WebElement loginButton = driver.findElement(By.cssSelector("button"));
@@ -58,19 +68,9 @@ public class LoginKoel {
         email.sendKeys("koeluser06@testpro.io");
         password.sendKeys("WrongPassword");
         loginButton.click();
-        Thread.sleep(1000);
         // Assert
-
+        wait.until(ExpectedConditions.visibilityOfElementLocated(By.cssSelector(".error")));
         List<WebElement> list = driver.findElements(By.cssSelector(".error"));
         Assert.assertEquals(list.size(),1);
     }
-        // //*[@alt='Headshot Image' and @src='https://s.udemycdn.com/topic-images/lohp-topic-banners/GettyImages-1166389425_opt.jpg']"
-        // //[contains(@src,'1166389425')]
-        // //*[text()='Learn. Grow. Succeed.']
-
-        // (//*[@alt='Headshot Image'])[1]
-        // //*[@class='header--gap-auth-button--7KoL0'])[1]/a/*[text()='Log in']
-        // /parent::*
-        // (//nav)/following-sibling::*[5]
-        //*[@class='header--gap-auth-button--7KoL0'])[1]/preceding-sibling::*[5]
 }
