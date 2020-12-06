@@ -1,16 +1,13 @@
 package pageObjects;
 
-import org.openqa.selenium.By;
-import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.*;
 import org.openqa.selenium.support.ui.ExpectedConditions;
-import org.openqa.selenium.support.ui.WebDriverWait;
 
-public class MainPage {
-    private WebDriver driver;
-    private WebDriverWait wait;
+import java.util.List;
+
+public class MainPage extends BasePage{
     public MainPage(WebDriver driver) {
-        this.driver = driver;
-        wait = new WebDriverWait(this.driver,10,200);
+        super(driver);
     }
 
     public boolean isMainPage(){
@@ -20,5 +17,38 @@ public class MainPage {
         } catch (Exception xx){
             return false;
         }
+    }
+    private void clickPlusCircle(){
+        for(int i=0;  i<50;i++){
+            try {
+                driver.findElement(By.cssSelector(".fa-plus-circle")).click();
+                break;
+            } catch (ElementClickInterceptedException | NoSuchElementException ignored){}
+        }
+    }
+    private WebElement getNewPlaylistField(){
+        return driver.findElement(By.xpath("//*[@class='create']/input"));
+    }
+
+    public String createPlaylist(String name) throws InterruptedException {
+        clickPlusCircle();
+        getNewPlaylistField().sendKeys(name);
+        getNewPlaylistField().sendKeys(Keys.RETURN);
+        wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//*[@class='success show']")));
+        return driver.getCurrentUrl().split("/")[5];
+    }
+
+    public boolean isPlaylistExist(String playlistId, String name) {
+        List<WebElement> list = driver.findElements(By.cssSelector("[href='#!/playlist/"+playlistId+"']"));
+        return list.size()==1 && list.get(0).getText().equals(name);
+    }
+
+    public void renamePlaylist(String playlistId, String newPlaylistName) {
+        // TODO Add body
+        // Scroll down - search how
+        // Double click on playlist
+        // Select All (Cntr-A)
+        // Enter new name
+        // Send Enter
     }
 }
