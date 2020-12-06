@@ -13,12 +13,12 @@ public class AgreeCultural {
         return nameOfCulture;
     }
 
-    public int getFielsNumber() {
-        return fielsNumber;
-    }
-
     public void setNameOfCulture(String nameOfCulture) {
         this.nameOfCulture = nameOfCulture;
+    }
+
+    public int getFielsNumber() {
+        return fielsNumber;
     }
 
     public void setFielsNumber(int fielsNumber) {
@@ -27,7 +27,9 @@ public class AgreeCultural {
 
     @Override
     public String toString() {
-        return nameOfCulture +
-                " on the filed number " + fielsNumber;
+        return "AgreeCultural{" +
+                "nameOfCulture='" + nameOfCulture + '\'' +
+                ", fielsNumber=" + fielsNumber +
+                '}';
     }
 }

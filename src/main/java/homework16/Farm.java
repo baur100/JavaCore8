@@ -1,17 +1,13 @@
 package homework16;
 
-import homework16.Address;
-import homework16.AgreeCultural;
-import homework16.Cattle;
-
 import java.util.List;
 import java.util.Map;
 
 public class Farm {
     private String name;
     private Address address;
-    private Map<Cattle,Integer> cattle;
-    private List<AgreeCultural> agreeCultural;
+    private Map< Cattle, Integer> cattle;
+    private List< AgreeCultural> agreeCultural;
 
     public Farm(String name, Address address, Map<Cattle, Integer> cattle, List<AgreeCultural> agreeCultural) {
         this.name = name;
@@ -24,48 +20,59 @@ public class Farm {
         return name;
     }
 
-    public Address getAddress() {
-        return address;
-    }
-
-    public Map<Cattle, Integer> getCattle() {
-        return cattle;
-    }
-
-    public List<AgreeCultural> getAgreeCultural() {
-        return agreeCultural;
-    }
-
     public void setName(String name) {
         this.name = name;
+    }
+
+    public Address getAddress() {
+        return address;
     }
 
     public void setAddress(Address address) {
         this.address = address;
     }
 
+    public Map<Cattle, Integer> getCattle() {
+        return cattle;
+    }
+
     public void setCattle(Map<Cattle, Integer> cattle) {
         this.cattle = cattle;
+    }
+
+    public List<AgreeCultural> getAgreeCultural() {
+        return agreeCultural;
     }
 
     public void setAgreeCultural(List<AgreeCultural> agreeCultural) {
         this.agreeCultural = agreeCultural;
     }
 
+    @Override
+    public String toString() {
+        return "Farm{" +
+                "name='" + name + '\'' +
+                ", address=" + address +
+                ", cattle=" + cattle +
+                ", agreeCultural=" + agreeCultural +
+                '}';
+    }
 
-    public void printAgreeCaltural(List<AgreeCultural> agreeCultural){
+    public void printAgreeCultural (List< AgreeCultural> agreeCultural){
         for(AgreeCultural a: agreeCultural){
             System.out.println(a);
-        }
-    }
-    public void printCattleAmmount(Map<Cattle,Integer>cattle){
-        cattle.entrySet().forEach(entry->{
-            System.out.println(entry.getKey()+" "+entry.getValue());
-        });
-    }
-    public void printInfo(){
-        System.out.println(name+" on "+address);
-        printAgreeCaltural(agreeCultural);
-        printCattleAmmount(cattle);
+        }}
+
+        public void printCatte(Map<Cattle, Integer> cattle){
+        for(Map.Entry<Cattle,Integer> c: cattle.entrySet()){
+            System.out.println(c.getKey() + " " + c.getValue() + " ");
+
+        }}
+
+        public void printInfo(){
+        System.out.println(name + " " + address + " ");
+        printAgreeCultural(agreeCultural);
+        printCatte(cattle);
+
     }
 }

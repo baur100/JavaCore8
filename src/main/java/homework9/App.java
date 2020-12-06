@@ -2,29 +2,31 @@ package homework9;
 
 public class App {
     public static void main(String[] args) {
-        Phone myPhone = new Phone();
-        myPhone.setBrand("Iphone");
-        myPhone.setModel("11 Max Pro");
-        myPhone.setYear(2019);
 
-        myPhone.printClass();
+        Furniture MyFur = new Furniture();
+        MyFur.setName(" table");
+        MyFur.setColor(" black");
+        MyFur.setSize( 25.5);
 
-        Dog kris = new Dog("Kris", "Black", 20);
-        kris.printDogAge();
-        Dog busta = new Dog();
-        busta.setName("Busta");
-        busta.setColor("Brown");
-        busta.setAge(3);
-        busta.printDogAge();
+        MyFur.printClass();
 
-        Patient olya = new Patient();
-        olya.setName("Olya");
-        olya.setLastName("M");
-        olya.setNumber(100);
-        String[] problems={"back","neck","sugar level"};
-        olya.setProblems(problems);
-        olya.needsHelp();
+        int[] taniasYear = {1992, 1996, 2000};
+        Friend tania = new Friend( "Tania", "Levchenko", taniasYear);
+
+        tania.printClass();
+        tania.printYear();
+
+
+
+
+
+
+
+
+
+
 
 
     }
 }
+

@@ -1,24 +1,24 @@
-package homework16;
+package hm15;
 
 public class Address {
-    private String streetName;
-    private  String town;
+    private String streetAddress;
+    private String town;
     private String state;
-    private int zip;
+    private String zip;
 
-    public Address(String streetName, String town, String state, int zip) {
-        this.streetName = streetName;
+    public Address(String streetAddress, String town, String state, String zip) {
+        this.streetAddress = streetAddress;
         this.town = town;
         this.state = state;
         this.zip = zip;
     }
 
-    public String getStreetName() {
-        return streetName;
+    public String getStreetAddress() {
+        return streetAddress;
     }
 
-    public void setStreetName(String streetName) {
-        this.streetName = streetName;
+    public void setStreetAddress(String streetAddress) {
+        this.streetAddress = streetAddress;
     }
 
     public String getTown() {
@@ -37,21 +37,23 @@ public class Address {
         this.state = state;
     }
 
-    public int getZip() {
+    public String getZip() {
         return zip;
     }
 
-    public void setZip(int zip) {
+    public void setZip(String zip) {
         this.zip = zip;
     }
 
     @Override
     public String toString() {
         return "Address{" +
-                "streetName='" + streetName + '\'' +
+                "streetAddress='" + streetAddress + '\'' +
                 ", town='" + town + '\'' +
                 ", state='" + state + '\'' +
-                ", zip=" + zip +
+                ", zip='" + zip + '\'' +
                 '}';
     }
 }
+
+

@@ -1,49 +1,61 @@
 package homework8;
 
 public class App {
-    public static void main(String[] args){
+    public static void main(String[] args) {
+        Furniture fur1 = new Furniture();
+        fur1.name = "table";
+        fur1.color = " black ";
+        fur1.size = 25.5;
 
-        Watches myWatch1=new Watches();
-        myWatch1.model="S1";
-        myWatch1.brand="Rolex";
-        myWatch1.size=7;
-        myWatch1.color="Silver";
+        fur1.buy();
+        fur1.know();
 
-        myWatch1.printInfo();
+        Furniture fur2 = new Furniture();
+        fur2.name = "chair";
+        fur2.color = "brown";
+        fur2.size = 3.8;
 
-        Watches myWatch2=new Watches();
-        myWatch2.model="S2";
-        myWatch2.brand="Omega";
-        myWatch2.size=5;
-        myWatch2.color="Gold";
+        fur2.buy();
+        fur2.know();
 
-        myWatch2.printInfo();
+        Shape oval = new Shape();
+        oval.name = "oval";
+        oval.color = "green";
+        oval.place = "on the table";
 
-        Fruit fr1=new Fruit();
-        fr1.name="Apple";
-        fr1.color="Green";
+        oval.act();
 
-        fr1.pie();
+        Shape square = new Shape();
+        square.name = " square";
+        square.color = " blue";
+        square.place = "on the floor";
 
-        Fruit fr2=new Fruit();
-        fr2.name="Charry";
-        fr2.color="Red";
+        square.act("triangle");
 
-        fr2.pie();
+        Sounds bird = new Sounds();
+        bird.animal = " sparrows ";
+        bird.size = " small ";
+        bird.quantity = "Two";
+
+        bird.voice();
+        bird.voice("nightingales");
+
+        Sounds parrot = new Sounds();
+        parrot.animal = " birds";
+        parrot.size = "huge";
+        parrot.quantity = " four ";
+
+        parrot.voice();
 
 
-        Kid kid1=new Kid();
-        kid1.name="Marshall";
-        kid1.lastName="G";
-        kid1.age=2;
 
-        kid1.cry();
 
-        Kid kid2=new Kid();
-        kid2.name="Nadya";
-        kid2.lastName="K";
-        kid2.age=1;
 
-        kid2.cry();
+
+
+
+
     }
+
 }
+

@@ -7,22 +7,30 @@ import java.util.Map;
 
 public class App {
     public static void main(String[] args) {
-        Map<Cattle,Integer> cattle=new HashMap<>();
-        cattle.put(Cattle.COWS,22);
-        cattle.put(Cattle.SHEEPS,100);
-        cattle.put(Cattle.PIGS,53);
-        cattle.put(Cattle.CHICKENS,140);
+        Address farmAddress = new Address("13 Pull Rd", "Chicago", "IL", 60015);
+        System.out.println(farmAddress);
+
+        Map<Cattle, Integer> cattle = new HashMap<>();
+        cattle.put(Cattle.CHICKENS, 45);
+        cattle.put(Cattle.COWS, 23);
+        cattle.put(Cattle.PIGS, 11);
+        cattle.put(Cattle.TURKEYS, 50);
+        cattle.put(Cattle.SHEEPS, 9);
+        System.out.println(cattle);
+
+        List<AgreeCultural> agreeCultural = new ArrayList<>();
+        agreeCultural.add(new AgreeCultural("Millet", 2));
+        agreeCultural.add(new AgreeCultural("Corn", 8));
+        agreeCultural.add(new AgreeCultural("Oats", 6));
+        System.out.println(agreeCultural);
 
 
-    List<AgreeCultural> agreeCultural=new ArrayList<>();
-    AgreeCultural corn=new AgreeCultural("Corn",1);
-    agreeCultural.add(corn);
-    agreeCultural.add(new AgreeCultural("Millet",2));
-    agreeCultural.add(new AgreeCultural("Potato",3));
 
 
-    Address myFarmAddress=new Address("113 berezka","Perm","Fl",33307);
-    Farm myFarm=new Farm("Kolhoz",myFarmAddress,cattle,agreeCultural);
-    myFarm.printInfo();
-}
-}
+
+        }
+
+
+
+    }
+

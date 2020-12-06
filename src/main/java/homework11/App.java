@@ -2,16 +2,33 @@ package homework11;
 
 public class App {
     public static void main(String[] args) {
-        Animal myAnimal=new Animal("Leo","lion",3,Color.YELLOW);
-        myAnimal.printAnimalColor();
+        Name ninasCompanyName = new Name("Nina");
+        Address ninasCompanyAddress = new Address (" 15 Molly St.", "Buffalo Grove","" +
+                "IL", 60089);
+        Company ninasCompany = new Company(ninasCompanyName, 1999,ninasCompanyAddress, Field.MARKETING);
 
-        HomeAnimal myHomeAnimal=new HomeAnimal("Masha","cat",7,Color.GRAY,"Nadya");
-        myHomeAnimal.printAnimalColor();
 
-        WiledAnimal myWiledAnimal=new WiledAnimal("Jack","squarel",1,Color.YELLOW,"park");
-        myWiledAnimal.printAnimalColor();
-        myWiledAnimal.printAnimalLocation();
+        Address ninasOwnerAddress = new Address("31 Brandon pl","Green Rd", "CA",
+                61290);
+        Owner ninaOwner = new Owner( ninasCompanyName,1978,ninasOwnerAddress, Field.OWNER, 20);
 
-        System.out.println(myWiledAnimal.getColor());
+
+        Address petersWorkerAddress = new Address(" 3 Toll Rd", "Palatine", "TX",
+                80052);
+        Name peterWorkersName = new Name( "Peter");
+        Worker peterWorker = new Worker(peterWorkersName, 1989,petersWorkerAddress, Field.SELLING, "Osborn",
+                "Sale manager");
+
+        System.out.print(ninasCompany);
+        System.out.print(ninaOwner);
+        System.out.print(peterWorker);
+
+        System.out.println(ninasCompany.getName().getPersonName());
+
+
+
+
+
+
     }
 }

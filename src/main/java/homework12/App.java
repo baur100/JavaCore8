@@ -2,20 +2,21 @@ package homework12;
 
 public class App {
     public static void main(String[] args) {
-        ConstructionCar car1=new ConstructionCar("X10","Cat");
-        car1.drive();
-        car1.work();
+        NewModel Kate = new NewModel(" Female", "russian", "FordModel");
+        Kate.BustModelStandart();
+        Kate.WaistModelStandart();
+        Kate.hipscmModelStandart();
 
-        ConstructionCar car01=new ConstructionCar("C130","CASE");
-        car01.drive();
-        car01.work();
+        Kate.modelPose();
+        Kate.modelWalk();
 
-        SuvCar car2=new SuvCar("Toyota","RAV4","Silver");
-        car2.drive();
-        car2.travel();
 
-        SuvCar car02=new SuvCar("BMW","X5","White");
-        car02.drive();
-        car02.travel();
+        Dietetics FiveDays = new Dietetics(" Mary","female", "in a two month", 6);
+        FiveDays.hipscmModelStandart();
+        FiveDays.WaistModelStandart();
+
+        FiveDays.lostWeight();
     }
+
+
 }
