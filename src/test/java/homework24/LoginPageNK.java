@@ -11,14 +11,14 @@ public class LoginPageNK extends BasePageNK{
         super(driver);
     }
     private WebElement getEmailField(){
-        wait.until(ExpectedConditions.elementToBeClickable(By.cssSelector(LoginPageLocators.emailCssSelector)));
-        return driver.findElement(By.cssSelector(LoginPageLocators.emailCssSelector));
+        wait.until(ExpectedConditions.elementToBeClickable(By.cssSelector(LoginPageLocatorsNK.emailCssSelector)));
+        return driver.findElement(By.cssSelector(LoginPageLocatorsNK.emailCssSelector));
     }
     private WebElement getPasswordField(){
-        return driver.findElement(By.cssSelector(LoginPageLocators.passwordCssSelector));
+        return driver.findElement(By.cssSelector(LoginPageLocatorsNK.passwordCssSelector));
     }
     private WebElement getLoginButton(){
-        return driver.findElement(By.cssSelector(LoginPageLocators.loginButtonCssSelector));
+        return driver.findElement(By.cssSelector(LoginPageLocatorsNK.loginButtonCssSelector));
     }
     public void open(){
         driver.get("https://koelapp.testpro.io/");
