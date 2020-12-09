@@ -28,6 +28,7 @@ public class LoginPage {
 
     }
     public void open(){
+
         driver.get("https://koelapp.testpro.io/");
     }
     public MainPage login(String user, String password) {
