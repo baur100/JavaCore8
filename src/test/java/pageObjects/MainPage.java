@@ -1,6 +1,7 @@
 package pageObjects;
 
 import org.openqa.selenium.*;
+import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 
 import java.util.List;
@@ -44,11 +45,14 @@ public class MainPage extends BasePage{
     }
 
     public void renamePlaylist(String playlistId, String newPlaylistName) {
-        // TODO Add body
-        // Scroll down - search how
-        // Double click on playlist
-        // Select All (Cntr-A)
-        // Enter new name
-        // Send Enter
+        WebElement playlist = driver.findElement(By.cssSelector("[href='#!/playlist/"+playlistId+"']"));
+        JavascriptExecutor js = (JavascriptExecutor) driver;
+        js.executeScript("arguments[0].scrollIntoView();", playlist);
+        Actions action = new Actions(driver);
+        action.doubleClick(playlist).perform();
+        WebElement editField = driver.findElement(By.xpath("//*[@class='playlist playlist editing']/input"));
+        editField.sendKeys(Keys.CONTROL+"a");
+        editField.sendKeys(newPlaylistName);
+        editField.sendKeys(Keys.ENTER);
     }
 }

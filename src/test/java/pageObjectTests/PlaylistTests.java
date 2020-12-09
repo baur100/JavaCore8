@@ -27,7 +27,6 @@ public class PlaylistTests extends BaseTest{
         loginPage.open();
         MainPage mainPage = loginPage.login("koeluser06@testpro.io","te$t$tudent");
         String playlistId = mainPage.createPlaylist(playlistName);
-        // TODO Add new function to rename playlist
         mainPage.renamePlaylist(playlistId,newPlaylistName);
 
         Assert.assertTrue(mainPage.isPlaylistExist(playlistId, newPlaylistName));
