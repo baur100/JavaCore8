@@ -30,4 +30,11 @@ public class PlaylistTestNK extends BaseTestNK {
         mainPage.renamePlaylist(playlistId,newPlaylistName);
         Assert.assertTrue(mainPage.isPlaylistExist(playlistId, newPlaylistName));
     }
+    @Test
+    public void removePlaylist_playlistRemoved() throws InterruptedException{
+        String playlistName =faker.ancient().god();
+        String playlistId = mainPage.createPlaylist(playlistName);
+        mainPage.removePlaylist(playlistId,playlistName);
+//        Assert.assertTrue(mainPage.isPlaylistDoesntExist(playlistId, playlistName));
+    }
 }

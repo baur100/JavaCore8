@@ -62,4 +62,19 @@ public class MainPageNK extends BasePageNK {
         editPlaylistField.sendKeys(newPlaylistName);
         editPlaylistField.sendKeys(Keys.ENTER);
     }
+    public void removePlaylist(String playlistId, String newPlaylistName){
+        WebElement PlaylistName = driver.findElement(By.cssSelector("[href='#!/playlist/" + playlistId + "']"));
+        JavascriptExecutor js = (JavascriptExecutor) driver;
+        js.executeScript("arguments[0].scrollIntoView()", PlaylistName);
+
+        Actions action = new Actions(driver);
+        action.click(PlaylistName).perform();
+
+        WebElement removeButton = driver.findElement(By.cssSelector("[class=\"del btn btn-red btn-delete-playlist\"]"));
+        removeButton.click();
+    }
+//    public boolean isPlaylistDoesntExist(String playlistId, String playlistName) {
+//        List<WebElement> list = driver.findElements(By.cssSelector("[href='#!/playlist/" + playlistId + "']"));
+//        return list.get(0).getText().isEmpty();
+//    }
 }
