@@ -1,16 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-<suite name="Master Suite">
+<suite name="Master Suite" parallel="classes" thread-count="4">
     <test name="All tests">
         <classes>
             <class name="pageObjectTests.LoginTest">
                 <methods>
-                    <include name="login_loginToAppUsingCorrectCredentials_SuccessfulLoginToApp"/>
+                    <exclude name="login_loginToAppUsingCorrectCredentials_SuccessfulLoginToApp"/>
                     <include name="wrongLogin"/>
-                    <include name="loginToApp1"/>
+                    <exclude name="loginToApp1"/>
                     <include name="wrongLogin1"/>
                     <include name="loginToApp2"/>
-                    <include name="wrongLogin2"/>
+                    <exclude name="wrongLogin2"/>
                 </methods>
             </class>
             <class name="pageObjectTests.LoginTest1">

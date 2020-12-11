@@ -6,14 +6,14 @@ import pageObjects.LoginPage;
 import pageObjects.MainPage;
 
 public class LoginTest1 extends BaseTest{
-    @Test
+    @Test(enabled = false)
     public void login_loginToAppUsingCorrectCredentials_SuccessfulLoginToApp_a(){
         LoginPage loginPage = new LoginPage(driver);
         loginPage.open();
         MainPage mainPage = loginPage.login("koeluser06@testpro.io","te$t$tudent");
         Assert.assertTrue(mainPage.isMainPage());
     }
-    @Test
+    @Test(enabled = false)
     public void wrongLogin_a(){
         // Arrange
         LoginPage loginPage = new LoginPage(driver);
