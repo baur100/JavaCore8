@@ -11,4 +11,18 @@ public class Student extends Person{
         this.college = college;
         this.term = term;
     }
+
+    @Override
+    public String toString() {
+        return "Student{" +
+                "major=" + major +
+                ", college='" + college + '\'' +
+                ", term=" + term +
+                ", name='" + name + '\'' +
+                ", lastName='" + lastName + '\'' +
+                ", year=" + year +
+                ", address=" + address +
+                '}';
+    }
 }
+

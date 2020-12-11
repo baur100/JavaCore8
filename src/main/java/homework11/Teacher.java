@@ -9,4 +9,14 @@ public class Teacher extends Person{
         this.subject = subject;
     }
 
+    @Override
+    public String toString() {
+        return "Teacher{" +
+                "subject=" + subject +
+                ", name='" + name + '\'' +
+                ", lastName='" + lastName + '\'' +
+                ", year=" + year +
+                ", address=" + address +
+                '}';
+    }
 }
