@@ -20,24 +20,37 @@ public class LoginPage {
         wait = new WebDriverWait(this.driver,10, 200);
     }
     private WebElement getEmailfield(){
-        wait.until(ExpectedConditions.elementToBeClickable(By.cssSelector("[type='email']")));
-        return driver.findElement(By.cssSelector("[type='email']"));
+        wait.until(ExpectedConditions.elementToBeClickable(By.cssSelector(LoginPageLocators.emailCssSelector)));
+        return driver.findElement(By.cssSelector(LoginPageLocators.emailCssSelector));
     }
 
     private WebElement getPasswordField(){
-        return driver.findElement(By.cssSelector("[type='password']"));
+        return driver.findElement(By.cssSelector(LoginPageLocators.passwordCssSelector));
 
     }
     private WebElement getLoginButton(){
-        return driver.findElement(By.cssSelector("button"));
+        return driver.findElement(By.cssSelector(LoginPageLocators.loginButtonCssSelector));
     }
 
     public void open(){
         driver.get("https://koelapp.testpro.io/");
     }
 
-    public void login(String user, String password) {
+    public MainPage login(String user, String password) {
+        getEmailfield().sendKeys(user);
+        getPasswordField().sendKeys(password);
+        getLoginButton().click();
+        return new MainPage(driver);
 
 
+    }
+
+    public boolean isError() {
+        try{
+            wait.until(ExpectedConditions.visibilityOfElementLocated(By.cssSelector(".error")));
+            return true;
+        } catch (Exception xx){
+            return false;
+        }
     }
 }
