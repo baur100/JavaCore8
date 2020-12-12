@@ -1,16 +1,25 @@
 package pageObjectTests;
 
+import listeners.RetryAnalyzer;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 import pageObjects.LoginPage;
 import pageObjects.MainPage;
 
 public class LoginTest1 extends BaseTest{
+    int count = 0;
+    @Test(retryAnalyzer = RetryAnalyzer.class)
+    public void flakyTest(){
+        if(count++<3){
+            Assert.assertTrue(false);
+        }
+        Assert.assertTrue(true);
+    }
     @Test(enabled = false)
     public void login_loginToAppUsingCorrectCredentials_SuccessfulLoginToApp_a(){
         LoginPage loginPage = new LoginPage(driver);
         loginPage.open();
-        MainPage mainPage = loginPage.login("koeluser06@testpro.io","te$t$tudent");
+        MainPage mainPage = loginPage.login(userName, password);
         Assert.assertTrue(mainPage.isMainPage());
     }
     @Test(enabled = false)
@@ -19,7 +28,7 @@ public class LoginTest1 extends BaseTest{
         LoginPage loginPage = new LoginPage(driver);
         loginPage.open();
         // Act
-        loginPage.login("koeluser06@testpro.io","WrongPassword");
+        loginPage.login(userName,"WrongPassword");
         // Assert
         Assert.assertTrue(loginPage.isError());
     }
@@ -27,7 +36,7 @@ public class LoginTest1 extends BaseTest{
     public void loginToApp1_a(){
         LoginPage loginPage = new LoginPage(driver);
         loginPage.open();
-        MainPage mainPage = loginPage.login("koeluser06@testpro.io","te$t$tudent");
+        MainPage mainPage = loginPage.login(userName, password);
         Assert.assertTrue(mainPage.isMainPage());
     }
     @Test
@@ -36,7 +45,7 @@ public class LoginTest1 extends BaseTest{
         LoginPage loginPage = new LoginPage(driver);
         loginPage.open();
         // Act
-        loginPage.login("koeluser06@testpro.io","WrongPassword");
+        loginPage.login(userName,"WrongPassword");
         // Assert
         Assert.assertTrue(loginPage.isError());
     }
@@ -44,7 +53,7 @@ public class LoginTest1 extends BaseTest{
     public void loginToApp2_a(){
         LoginPage loginPage = new LoginPage(driver);
         loginPage.open();
-        MainPage mainPage = loginPage.login("koeluser06@testpro.io","te$t$tudent");
+        MainPage mainPage = loginPage.login(userName, password);
         Assert.assertTrue(mainPage.isMainPage());
     }
     @Test
@@ -53,7 +62,7 @@ public class LoginTest1 extends BaseTest{
         LoginPage loginPage = new LoginPage(driver);
         loginPage.open();
         // Act
-        loginPage.login("koeluser06@testpro.io","WrongPassword");
+        loginPage.login(userName,"WrongPassword");
         // Assert
         Assert.assertTrue(loginPage.isError());
     }

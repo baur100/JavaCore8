@@ -14,7 +14,7 @@ public class PlaylistTests1 extends BaseTest{
         String playlistName = TestDataGenerator.randomString(8); //faker.ancient().god();
         LoginPage loginPage = new LoginPage(driver);
         loginPage.open();
-        MainPage mainPage = loginPage.login("koeluser06@testpro.io","te$t$tudent");
+        MainPage mainPage = loginPage.login(userName, password);
         String playlistId = mainPage.createPlaylist(playlistName);
         Assert.assertTrue(mainPage.isPlaylistExist(playlistId,playlistName));
     }
@@ -25,7 +25,7 @@ public class PlaylistTests1 extends BaseTest{
         String newPlaylistName = TestDataGenerator.randomString(9);
         LoginPage loginPage = new LoginPage(driver);
         loginPage.open();
-        MainPage mainPage = loginPage.login("koeluser06@testpro.io","te$t$tudent");
+        MainPage mainPage = loginPage.login(userName, password);
         String playlistId = mainPage.createPlaylist(playlistName);
         mainPage.renamePlaylist(playlistId,newPlaylistName);
 
@@ -37,7 +37,7 @@ public class PlaylistTests1 extends BaseTest{
         String playlistName = TestDataGenerator.randomString(8); //faker.ancient().god();
         LoginPage loginPage = new LoginPage(driver);
         loginPage.open();
-        MainPage mainPage = loginPage.login("koeluser06@testpro.io","te$t$tudent");
+        MainPage mainPage = loginPage.login(userName, password);
         String playlistId = mainPage.createPlaylist(playlistName);
         Assert.assertTrue(mainPage.isPlaylistExist(playlistId,playlistName));
     }
@@ -48,7 +48,7 @@ public class PlaylistTests1 extends BaseTest{
         String newPlaylistName = TestDataGenerator.randomString(9);
         LoginPage loginPage = new LoginPage(driver);
         loginPage.open();
-        MainPage mainPage = loginPage.login("koeluser06@testpro.io","te$t$tudent");
+        MainPage mainPage = loginPage.login(userName, password);
         String playlistId = mainPage.createPlaylist(playlistName);
         mainPage.renamePlaylist(playlistId,newPlaylistName);
 
@@ -60,7 +60,7 @@ public class PlaylistTests1 extends BaseTest{
         String playlistName = TestDataGenerator.randomString(8); //faker.ancient().god();
         LoginPage loginPage = new LoginPage(driver);
         loginPage.open();
-        MainPage mainPage = loginPage.login("koeluser06@testpro.io","te$t$tudent");
+        MainPage mainPage = loginPage.login(userName, password);
         String playlistId = mainPage.createPlaylist(playlistName);
         Assert.assertTrue(mainPage.isPlaylistExist(playlistId,playlistName));
     }
@@ -71,7 +71,7 @@ public class PlaylistTests1 extends BaseTest{
         String newPlaylistName = TestDataGenerator.randomString(9);
         LoginPage loginPage = new LoginPage(driver);
         loginPage.open();
-        MainPage mainPage = loginPage.login("koeluser06@testpro.io","te$t$tudent");
+        MainPage mainPage = loginPage.login(userName, password);
         String playlistId = mainPage.createPlaylist(playlistName);
         mainPage.renamePlaylist(playlistId,newPlaylistName);
 

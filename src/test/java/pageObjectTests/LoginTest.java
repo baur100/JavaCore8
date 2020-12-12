@@ -10,7 +10,7 @@ public class LoginTest extends BaseTest{
     public void login_loginToAppUsingCorrectCredentials_SuccessfulLoginToApp(){
         LoginPage loginPage = new LoginPage(driver);
         loginPage.open();
-        MainPage mainPage = loginPage.login("koeluser06@testpro.io","te$t$tudent");
+        MainPage mainPage = loginPage.login(userName, password);
         Assert.assertTrue(mainPage.isMainPage());
     }
     @Test
@@ -19,7 +19,7 @@ public class LoginTest extends BaseTest{
         LoginPage loginPage = new LoginPage(driver);
         loginPage.open();
         // Act
-        loginPage.login("koeluser06@testpro.io","WrongPassword");
+        loginPage.login(userName, "WrongPassword");
         // Assert
         Assert.assertTrue(loginPage.isError());
     }
@@ -27,7 +27,7 @@ public class LoginTest extends BaseTest{
     public void loginToApp1(){
         LoginPage loginPage = new LoginPage(driver);
         loginPage.open();
-        MainPage mainPage = loginPage.login("koeluser06@testpro.io","te$t$tudent");
+        MainPage mainPage = loginPage.login(userName, password);
         Assert.assertTrue(mainPage.isMainPage());
     }
     @Test
@@ -36,7 +36,7 @@ public class LoginTest extends BaseTest{
         LoginPage loginPage = new LoginPage(driver);
         loginPage.open();
         // Act
-        loginPage.login("koeluser06@testpro.io","WrongPassword");
+        loginPage.login(userName, "WrongPassword");
         // Assert
         Assert.assertTrue(loginPage.isError());
     }
@@ -44,7 +44,7 @@ public class LoginTest extends BaseTest{
     public void loginToApp2(){
         LoginPage loginPage = new LoginPage(driver);
         loginPage.open();
-        MainPage mainPage = loginPage.login("koeluser06@testpro.io","te$t$tudent");
+        MainPage mainPage = loginPage.login(userName, password);
         Assert.assertTrue(mainPage.isMainPage());
     }
     @Test
@@ -53,7 +53,7 @@ public class LoginTest extends BaseTest{
         LoginPage loginPage = new LoginPage(driver);
         loginPage.open();
         // Act
-        loginPage.login("koeluser06@testpro.io","WrongPassword");
+        loginPage.login(userName,"WrongPassword");
         // Assert
         Assert.assertTrue(loginPage.isError());
     }
