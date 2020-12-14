@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+    <suite name="Master Suite" parallel="classes" thread-count="4">
+    <parameter name="username" value="koeluser06@testpro.io"/>
+    <parameter name="password" value="te$t$tudent"/>
+        <test name="All tests">
+            <classes>
+                <class name="homework24.PlaylistTestNK">
+                    <methods>
+                        <include name="flakyTest"/>
+                        <include name="start"/>
+                        <include name="createPlaylist_playlistCreated"/>
+                        <include name="renamePlaylist_playlistRenamed"/>
+                        <include name="removePlaylist_playlistRemoved"/>
+                    </methods>
+                </class>
+            </classes>
+        </test>
+    </suite>

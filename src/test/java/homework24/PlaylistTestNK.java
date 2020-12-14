@@ -1,19 +1,28 @@
 package homework24;
 
 import com.github.javafaker.Faker;
+import listeners.RetryAnalyzer;
 import org.testng.Assert;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
 public class PlaylistTestNK extends BaseTestNK {
+    int count = 0;
+    @Test(retryAnalyzer = RetryAnalyzer.class)
+    public void flakyTest(){
+        if(count++<3){
+            Assert.assertTrue(false);
+        }
+        Assert.assertTrue(true);
+    }
     public static Faker faker = new Faker();
     public static MainPageNK mainPage;
     @BeforeMethod
     public void start(){
         LoginPageNK loginPage = new LoginPageNK(driver);
         loginPage.open();
-        mainPage = loginPage.login("koeluser06@testpro.io","te$t$tudent");
+        mainPage = loginPage.login(userName, password);
     }
 
     @Test
@@ -35,6 +44,7 @@ public class PlaylistTestNK extends BaseTestNK {
         String playlistName =faker.ancient().god();
         String playlistId = mainPage.createPlaylist(playlistName);
         mainPage.removePlaylist(playlistId,playlistName);
-//        Assert.assertTrue(mainPage.isPlaylistDoesntExist(playlistId, playlistName));
+        Thread.sleep(5000);
+        Assert.assertTrue(mainPage.isPlaylistDoesntExist(playlistId));
     }
 }

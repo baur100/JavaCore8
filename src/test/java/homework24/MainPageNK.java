@@ -73,8 +73,9 @@ public class MainPageNK extends BasePageNK {
         WebElement removeButton = driver.findElement(By.cssSelector("[class=\"del btn btn-red btn-delete-playlist\"]"));
         removeButton.click();
     }
-//    public boolean isPlaylistDoesntExist(String playlistId, String playlistName) {
-//        List<WebElement> list = driver.findElements(By.cssSelector("[href='#!/playlist/" + playlistId + "']"));
-//        return list.get(0).getText().isEmpty();
-//    }
+    public boolean isPlaylistDoesntExist(String playlistId) {
+        List<WebElement> list = driver.findElements(By.cssSelector("[href='#!/playlist/" + playlistId + "']"));
+        System.out.println(list.size());
+        return list.size()==0;
+    }
 }
