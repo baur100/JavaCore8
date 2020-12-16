@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Master Suite" parallel="classes" thread-count="4">
+    <listeners>
+        <listener class-name="listeners.Listeners"/>
+    </listeners>
+    <parameter name="username" value="koeluser06@testpro.io"/>
+    <parameter name="password" value="te$t$tudent1"/>
+    <test name="All tests">
+        <classes>
+            <class name="pageObjectTests.LoginTest">
+                <methods>
+                    <include name="login_loginToAppUsingCorrectCredentials_SuccessfulLoginToApp"/>
+                    <include name="wrongLogin"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+</suite>
