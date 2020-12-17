@@ -29,6 +29,7 @@ public class BrowserFabric {
         ChromeOptions options = new ChromeOptions();
         options.addArguments("window-size=1400,1000");
         options.addArguments("--headless");
+//        options.addArguments("--auto-open-devtools-for-tabs");
         System.setProperty("webdriver.chrome.driver","chromedriver.exe");
         return new ChromeDriver(options);
     }
