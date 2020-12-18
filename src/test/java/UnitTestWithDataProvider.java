@@ -4,7 +4,7 @@ import org.testng.annotations.Test;
 import tickets.CalculateTicket;
 
 public class UnitTestWithDataProvider {
-    @DataProvider(name = "Ages")
+    @DataProvider(name = "People")
     public Object[][] getData(){
         return new Object[][]{
                 {1,0.0},
@@ -15,7 +15,7 @@ public class UnitTestWithDataProvider {
     }
 
 
-    @Test(dataProvider = "Ages")
+    @Test(dataProvider = "People")
     public void testTicket(int age, double expectedPrice){
 
         CalculateTicket calculator = new CalculateTicket(1000);
