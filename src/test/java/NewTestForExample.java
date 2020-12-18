@@ -3,8 +3,8 @@ import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 import tickets.CalculateTicket;
 
-public class UnitTestWithDataProvider {
-    @DataProvider(name = "People")
+public class NewTestForExample {
+    @DataProvider(name = "Ages")
     public Object[][] getData(){
         return new Object[][]{
                 {1,0.0},
@@ -14,7 +14,8 @@ public class UnitTestWithDataProvider {
         };
     }
 
-    @Test(dataProvider = "People")
+
+    @Test(dataProvider = "Ages")
     public void testTicket(int age, double expectedPrice){
 
         CalculateTicket calculator = new CalculateTicket(1000);
