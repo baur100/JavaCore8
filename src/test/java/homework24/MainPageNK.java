@@ -32,8 +32,10 @@ public class MainPageNK extends BasePageNK {
     }
 
     private WebElement getNewPlaylistField() {
+
         return driver.findElement(By.xpath("//*[@class='create']/input"));
     }
+
 
     public String createPlaylist(String name) throws InterruptedException {
         clickPlusCircle();
