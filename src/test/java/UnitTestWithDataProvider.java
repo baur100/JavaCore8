@@ -14,7 +14,6 @@ public class UnitTestWithDataProvider {
         };
     }
 
-
     @Test(dataProvider = "People")
     public void testTicket(int age, double expectedPrice){
 
