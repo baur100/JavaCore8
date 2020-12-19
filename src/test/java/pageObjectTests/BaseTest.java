@@ -15,12 +15,13 @@ public class BaseTest {
     protected String userName;
     protected String password;
 
-    @Parameters({"username", "password"})
+    @Parameters({"username", "password", "browser"})
     @BeforeMethod
-    public void startUp(String email,String pwd) {
+    public void startUp(String email,String pwd, String browser) {
         userName = email;
         password = pwd;
-        driver = BrowserFabric.getDriver(BrowserType.CHROME);
+        BrowserType browserType = browser.equals("chrome") ? BrowserType.CHROME : BrowserType.FIREFOX;
+        driver = BrowserFabric.getDriver(browserType);
     }
     @AfterMethod
     public void tearDown(ITestResult iTestResult) throws InterruptedException {
