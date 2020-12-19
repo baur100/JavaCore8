@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd" >
+<suite name="Master Suite" parallel="classes" thread-count="4">
+    <listeners>
+        <listener class-name="listeners.Listener"/>
+    </listeners>
+    <parameter name="userName"  value="koeluser06@testpro.io"/>
+    <parameter name="password" value="te$t$tudent"/>
+
+    <test name="All tests">
+        <classes>
+            <class name="PageObjectTest.LoginTest">
+                <methods>
+                    <exclude name="login_loginToUpUsingCorrect Credentials_SuccessfulLoginToApp"/>
+                    <include name="wronglogin"/>
+                </methods>
+            </class>
+            <class name="PageObjectTest.PlaylistTest">
+                <methods>
+                    <include name="createPlaylist_playListCreated"/>
+                    <include name="renamePlaylist_playListRenamed"/>
+                </methods>
+
+            </class>
+        </classes>
+    </test>
+</suite>

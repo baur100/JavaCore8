@@ -1,47 +1,59 @@
 package PageObjectTest;
 
-import PageObject.LoginPage;
-import PageObjects.MainPage;
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.chrome.ChromeDriver;
-import org.testng.Assert;
-import org.testng.annotations.AfterMethod;
-import org.testng.annotations.BeforeMethod;
-import org.testng.annotations.Test;
+        import PageObject.LoginPage;
+        import PageObjects.MainPage;
+        import listeners.RetryAnalyzer;
+        import org.openqa.selenium.WebDriver;
+        import org.openqa.selenium.chrome.ChromeDriver;
+        import org.testng.Assert;
+        import org.testng.annotations.AfterMethod;
+        import org.testng.annotations.BeforeMethod;
+        import org.testng.annotations.Test;
 
-public class LoginTest {
-    private WebDriver driver;
+public class LoginTest extends BaseTest {
 
-    @BeforeMethod
-    public void startUp() {
-        System.setProperty("webdriver.chrome.driver", "chromedriver.exe");
-        driver = new ChromeDriver();
+    @Test (retryAnalyzer = RetryAnalyzer.class)
+    public void flakyTest(){
+        int count = 0;
+        if (count++<3){
+            Assert.assertTrue(false);
 
+        }
+        Assert.assertTrue(true);
     }
 
-    @AfterMethod
-    public void tearDown() throws InterruptedException {
-        Thread.sleep(3000);
-        driver.quit();
-    }
 
     @Test
-    public void loginToUp() {
+    public void loginToAppUsingCorrectCredentials_SuccessfulLoginToApp() {
         LoginPage loginPage = new LoginPage(driver);
         loginPage.open();
-        MainPage mainPage = loginPage.login("koeluser06@testpro.io", "te$t$tudent");
+        MainPage mainPage = loginPage.login(userName, password);
         Assert.assertTrue(mainPage.isMainPage());
 
     }
 
     @Test
-    public void wrongloginToUp() {
+    public void wronglogin() {
         LoginPage loginPage = new LoginPage(driver);
         loginPage.open();
-        loginPage.login("koeluser06@testpro.io", "WrongPassword");
+        loginPage.login(userName, password);
         Assert.assertTrue(loginPage.isError());
 
     }
 
+    @Test
+    public void loginToApp() {
+        LoginPage loginPage = new LoginPage(driver);
+        loginPage.open();
+        MainPage mainPage = loginPage.login(userName, password);
+        Assert.assertTrue(mainPage.isMainPage());
+    }
 
+    @Test(enabled=false)
+    public void wronglogin1() {
+        LoginPage loginPage = new LoginPage(driver);
+        loginPage.open();
+        loginPage.login(userName, "WrongPassword");
+        Assert.assertTrue(loginPage.isError());
+    }
 }

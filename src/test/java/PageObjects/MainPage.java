@@ -1,5 +1,7 @@
 package PageObjects;
 
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 import org.openqa.selenium.*;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.ExpectedConditions;
@@ -8,50 +10,51 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 
 import java.util.List;
 
-public class MainPage {
-    private WebDriver driver;
-    private WebDriverWait wait;
-    private FluentWait<WebDriver> fluentWait;
-
-    public MainPage(WebDriver driver) {
-        this.driver = driver;
-        wait = new WebDriverWait(this.driver, 10, 200);
-
-    }
-
-    public boolean isMainPage() {
+public class MainPage extends BasePage{
+    private static Logger logger = LogManager.getLogger(MainPage.class);
+    public MainPage (WebDriver driver) {super(driver);}
+    public boolean isMainPage(){
         try {
             wait.until(ExpectedConditions.visibilityOfElementLocated(By.cssSelector(".home")));
-            return true;
-        } catch (Exception xx) {
-            return false;
+            return  true;
 
+            }catch (Exception xx){
+            return false;
         }
     }
 
+
     public void clickPlusCircle() {
+        logger.info("trying to click plus button");
         for (int i = 0; i < 50; i++) {
 
             try {
                 driver.findElement(By.cssSelector(".fa-plus-circle")).click();
                 break;
             } catch (ElementClickInterceptedException | NoSuchElementException ignored) {
+
             }
 
         }
     }
 
-    public WebElement getNewPlayListField() {
-        wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//*[@class='create']/input")));
+    private WebElement getNewPlayListField() {
+//        wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//*[@class='create']/input")));
         return driver.findElement(By.xpath("//*[@class='create']/input"));
     }
 
 
     public String createPlayList(String name)
         throws InterruptedException{
-            clickPlusCircle();
+        logger.info("In the createplaylist method");
+        clickPlusCircle();
+        logger.info(("Plus circle clicked"));
+        logger.info(("Sending name "+name));
+
             getNewPlayListField().sendKeys(name);
+            logger.info("name sent");
             getNewPlayListField().sendKeys(Keys.ENTER);
+            logger.info("Enter passed");
             wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//*[@class='success show']")));
             return driver.getCurrentUrl().split("/")[5];
 
