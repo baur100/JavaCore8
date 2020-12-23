@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Master Suite" parallel="classes" thread-count="4">
+    <listeners>
+        <listener class-name="listeners.Listeners"/>
+    </listeners>
+    <parameter name="username" value="koeluser06@testpro.io"/>
+    <parameter name="password" value="te$t$tudent"/>
+    <test name="All tests">
+        <classes>
+            <class name="pageObjectTests.LoginTest">
+                <methods>
+                    <exclude name="login_loginToAppUsingCorrectCredentials_SuccessfulLoginToApp"/>
+                    <include name="wrongLogin"/>
+                    <exclude name="loginToApp1"/>
+                    <include name="wrongLogin1"/>
+                    <include name="loginToApp2"/>
+                    <exclude name="wrongLogin2"/>
+                </methods>
+            </class>
+            <class name="pageObjectTests.LoginTest1">
+                <methods>
+                    <include name="login_loginToAppUsingCorrectCredentials_SuccessfulLoginToApp_a"/>
+                    <include name="wrongLogin_a"/>
+                    <include name="loginToApp1_a"/>
+                    <include name="wrongLogin1_a"/>
+                    <include name="loginToApp2_a"/>
+                    <include name="wrongLogin2_a"/>
+                    <include name="flakyTest"/>
+                </methods>
+            </class>
+            <class name="pageObjectTests.PlaylistTests">
+                <methods>
+                    <include name="createPlaylist_playlistCreated"/>
+                    <include name="renamePlaylist_playlistRenamed"/>
+                    <include name="createPlaylist_playlistCreated1"/>
+                    <include name="renamePlaylist_playlistRenamed1"/>
+                    <include name="createPlaylist_playlistCreated2"/>
+                    <include name="renamePlaylist_playlistRenamed2"/>
+                </methods>
+            </class>
+            <class name="pageObjectTests.PlaylistTests1">
+                <methods>
+                    <include name="createPlaylist_playlistCreated_a"/>
+                    <include name="renamePlaylist_playlistRenamed_a"/>
+                    <include name="createPlaylist_playlistCreated1_a"/>
+                    <include name="renamePlaylist_playlistRenamed1_a"/>
+                    <include name="createPlaylist_playlistCreated2_a"/>
+                    <include name="renamePlaylist_playlistRenamed2_a"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+</suite>

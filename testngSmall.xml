@@ -5,7 +5,8 @@
         <listener class-name="listeners.Listeners"/>
     </listeners>
     <parameter name="username" value="koeluser06@testpro.io"/>
-    <parameter name="password" value="te$t$tudent1"/>
+    <parameter name="password" value="te$t$tudent"/>
+    <parameter name="browser" value="xx"/>
     <test name="All tests">
         <classes>
             <class name="pageObjectTests.LoginTest">

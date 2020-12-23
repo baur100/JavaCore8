@@ -38,17 +38,11 @@ public class App {
 //        values.forEach(System.out::println);
 
         Set<String>keys = capitals.keySet();
-        for(String v: keys){
-//            System.out.println(v);
-        }
+        //            System.out.println(v);
 
-        for (String v : capitals.keySet()){
-//            System.out.println(v);
-        }
+        //            System.out.println(v);
 
-        for (String v : capitals.values()){
-//            System.out.println(v);
-        }
+        //            System.out.println(v);
 
         for (Map.Entry<String,String> v : capitals.entrySet()){
             System.out.println(v.getKey() + " " + v.getValue());
