@@ -41,14 +41,14 @@ public class PetStore {
         String endPoint = "/pet/"+id;
 
         Response response = given()
-                                .baseUri(baseUrl)
-                                .basePath(endPoint)
-                            .when()
-                                .get()
-                            .then()
-                                .statusCode(200)
-                                .extract()
-                                .response();
+                .baseUri(baseUrl)
+                .basePath(endPoint)
+                .when()
+                .get()
+                .then()
+                .statusCode(200)
+                .extract()
+                .response();
         JsonPath jsonPath = response.jsonPath();
         Pet petResponse = jsonPath.getObject("$",Pet.class);
 
