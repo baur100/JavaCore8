@@ -16,5 +16,15 @@ public class App {
 
         char x = 'x';
         Character x1 = 'x';
+
+        int xx = 5;
+        int zz = xx;
+        zz = 10;
+        System.out.println("xx="+xx+" zz="+zz);
+
+        Person dina = new Person("Dina");
+        Person student = dina;
+        student.setName("Marat");
+        System.out.println("Dina = "+dina.getName()+" Student = "+student.getName());
     }
 }
