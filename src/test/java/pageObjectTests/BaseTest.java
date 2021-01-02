@@ -1,13 +1,12 @@
 package pageObjectTests;
 
 import enums.BrowserType;
-import helper.BrowserFabric;
-import helper.ScreenShot;
+import helper_1.BrowserFabric_1;
+import helper_1.ScreenShot_1;
 import org.openqa.selenium.WebDriver;
 import org.testng.ITestResult;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
-import org.testng.annotations.BeforeSuite;
 import org.testng.annotations.Parameters;
 
 public class BaseTest {
@@ -20,13 +19,13 @@ public class BaseTest {
     public void startUp(String email,String pwd) {
         userName = email;
         password = pwd;
-        driver = BrowserFabric.getDriver(BrowserType.CHROME);
+        driver = BrowserFabric_1.getDriver(BrowserType.CHROME);
     }
     @AfterMethod
     public void tearDown(ITestResult iTestResult) throws InterruptedException {
 //        Thread.sleep(3000);
         if(iTestResult.getStatus()==iTestResult.FAILURE){
-            ScreenShot.capture(driver,iTestResult.getName());
+            ScreenShot_1.capture(driver,iTestResult.getName());
         }
         driver.quit();
     }
