@@ -1,10 +1,10 @@
-package models_1;
+package models;
 
-public class Category_1 {
+public class Tag {
     private long id;
     private String name;
 
-    public Category_1(long id, String name) {
+    public Tag(long id, String name) {
         this.id = id;
         this.name = name;
     }

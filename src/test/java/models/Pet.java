@@ -1,19 +1,19 @@
-package models_1;
+package models;
 
-public class Pet_1 {
+public class Pet {
     private long id;
-    private Category_1 category;
+    private Category category;
     private String name;
     private String[] photoUrl;
-    private Tag_1[] tags;
-    private Status_1 status;
+    private Tag[] tags;
+    private Status status;
 
-    public Pet_1(String name, String[] photoUrl) {
+    public Pet(String name, String[] photoUrl) {
         this.name = name;
         this.photoUrl = photoUrl;
     }
 
-    public Pet_1(Category_1 category, String name, String[] photoUrl, Tag_1[] tags, Status_1 status) {
+    public Pet(Category category, String name, String[] photoUrl, Tag[] tags, Status status) {
         this.category = category;
         this.name = name;
         this.photoUrl = photoUrl;
@@ -29,7 +29,7 @@ public class Pet_1 {
         return id;
     }
 
-    public Category_1 getCategory() {
+    public Category getCategory() {
         return category;
     }
 
@@ -41,11 +41,11 @@ public class Pet_1 {
         return photoUrl;
     }
 
-    public Tag_1[] getTags() {
+    public Tag[] getTags() {
         return tags;
     }
 
-    public Status_1 getStatus() {
+    public Status getStatus() {
         return status;
     }
 }
