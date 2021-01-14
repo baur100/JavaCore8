@@ -52,6 +52,7 @@ public class MainPageNK extends BasePageNK {
     }
 
     public void renamePlaylist(String playlistId, String newPlaylistName) {
+        wait.until(ExpectedConditions.elementToBeClickable(By.cssSelector("[href='#!/playlist/"+playlistId+"']")));
         WebElement PlaylistName = driver.findElement(By.cssSelector("[href='#!/playlist/" + playlistId + "']")); //href="#!/playlist/54"
         JavascriptExecutor js = (JavascriptExecutor) driver;
         js.executeScript("arguments[0].scrollIntoView()", PlaylistName);
