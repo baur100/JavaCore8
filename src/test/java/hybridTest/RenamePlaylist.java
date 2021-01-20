@@ -9,7 +9,6 @@ import io.restassured.response.Response;
 import models.CreatePlaylistRequest;
 import models.CreatePlaylistResponse;
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.html5.LocalStorage;
 import org.testng.Assert;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeClass;
